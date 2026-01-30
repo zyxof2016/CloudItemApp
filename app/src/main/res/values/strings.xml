@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">云朵识物乐园</string>
+    
+    <!-- Main Screen -->
+    <string name="main_title">☁️ 云朵识物乐园</string>
+    <string name="learning_title">📚 认物学习</string>
+    <string name="learning_desc">认识各种有趣的物品</string>
+    <string name="game_title">🎮 趣味游戏</string>
+    <string name="game_desc">边玩边学更开心</string>
+    <string name="achievement_title">🏆 我的成就</string>
+    <string name="achievement_desc">看看你获得了什么成就</string>
+    <string name="settings_title">⚙️ 设置</string>
+    <string name="settings_desc">调整应用设置</string>
+    <string name="slogan">快乐学习，快乐成长！</string>
+    
+    <!-- Learning Screen -->
+    <string name="learning">认物学习</string>
+    <string name="back">返回</string>
+    <string name="previous">上一个</string>
+    <string name="next">下一个</string>
+    <string name="play_pronunciation">播放读音</string>
+    
+    <!-- Categories -->
+    <string name="category_animals">动物</string>
+    <string name="category_fruits">水果</string>
+    <string name="category_vegetables">蔬菜</string>
+    <string name="category_vehicles">交通工具</string>
+    <string name="category_daily_items">日常用品</string>
+    <string name="category_nature">自然</string>
+    <string name="category_food">食物</string>
+    <string name="category_body">身体</string>
+    
+    <!-- Game Screen -->
+    <string name="game_menu">🎯 猜猜看游戏</string>
+    <string name="game_menu_desc">根据物品特征，猜猜是什么</string>
+    <string name="start_game">🚀 开始游戏</string>
+    <string name="click_to_start">点击开始挑战</string>
+    <string name="question">这是什么？</string>
+    <string name="hint">提示:</string>
+    <string name="score">得分</string>
+    <string name="correct_rate">正确率</string>
+    <string name="correct_count">正确数量</string>
+    <string name="game_over">游戏结束！</string>
+    <string name="play_again">再玩一次</string>
+    <string name="back_to_menu">返回菜单</string>
+    
+    <!-- Profile Screen -->
+    <string name="my_achievements">我的成就</string>
+    <string name="explorer">小探险家</string>
+    <string name="level">🌟 Level</string>
+    <string name="learned">已学习</string>
+    <string name="game_count">游戏次数</string>
+    <string name="stars">星星</string>
+    
+    <!-- Achievements -->
+    <string name="achievement_first_explore">初次探索</string>
+    <string name="achievement_first_explore_desc">完成第一次学习</string>
+    <string name="achievement_learning_master">学习达人</string>
+    <string name="achievement_learning_master_desc">学习10个物品</string>
+    <string name="achievement_game_master">游戏高手</string>
+    <string name="achievement_game_master_desc">完成5次游戏</string>
+    <string name="achievement_continuous_learning">连续学习</string>
+    <string name="achievement_continuous_learning_desc">连续学习3天</string>
+    <string name="achievement_all_knowing">全知全能</string>
+    <string name="achievement_all_knowing_desc">学习所有分类</string>
+    <string name="achievement_perfect_answer">完美答案</string>
+    <string name="achievement_perfect_answer_desc">连续答对10题</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">设置</string>
+    <string name="sound_settings">声音设置</string>
+    <string name="sound_effects">音效</string>
+    <string name="sound_effects_desc">开启/关闭游戏音效</string>
+    <string name="background_music">背景音乐</string>
+    <string name="background_music_desc">开启/关闭背景音乐</string>
+    <string name="language_settings">语言设置</string>
+    <string name="language">语言</string>
+    <string name="language_desc">选择应用语言</string>
+    <string name="chinese">中文</string>
+    <string name="english">English</string>
+    <string name="bilingual">双语</string>
+    <string name="display_settings">显示设置</string>
+    <string name="font_size">字体大小</string>
+    <string name="font_size_desc">调整应用字体大小</string>
+    <string name="eye_protection">护眼模式</string>
+    <string name="eye_protection_desc">减少屏幕蓝光</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="developer">开发者</string>
+    <string name="developer_value">云朵团队</string>
+    <string name="reset_settings">重置所有设置</string>
+    
+    <!-- Common -->
+    <string name="loading">加载中…</string>
+    <string name="error">错误</string>
+    <string name="retry">重试</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="save">保存</string>
+</resources>
