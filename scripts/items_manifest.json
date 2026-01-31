@@ -1,0 +1,12 @@
+[
+  {"imageRes": "cat", "nameCN": "猫", "nameEN": "Cat"},
+  {"imageRes": "dog", "nameCN": "狗", "nameEN": "Dog"},
+  {"imageRes": "rabbit", "nameCN": "兔子", "nameEN": "Rabbit"},
+  {"imageRes": "apple", "nameCN": "苹果", "nameEN": "Apple"},
+  {"imageRes": "banana", "nameCN": "香蕉", "nameEN": "Banana"},
+  {"imageRes": "carrot", "nameCN": "胡萝卜", "nameEN": "Carrot"},
+  {"imageRes": "car", "nameCN": "汽车", "nameEN": "Car"},
+  {"imageRes": "sun", "nameCN": "太阳", "nameEN": "Sun"},
+  {"imageRes": "bread", "nameCN": "面包", "nameEN": "Bread"},
+  {"imageRes": "eyes", "nameCN": "眼睛", "nameEN": "Eyes"}
+]

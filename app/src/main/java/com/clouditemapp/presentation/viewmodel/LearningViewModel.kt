@@ -26,7 +26,7 @@ class LearningViewModel @Inject constructor(
     private val _items = MutableStateFlow<List<Item>>(emptyList())
     val items: StateFlow<List<Item>> = _items.asStateFlow()
 
-    private val _selectedCategory = MutableStateFlow("动物")
+    private val _selectedCategory = MutableStateFlow("动物世界")
     val selectedCategory: StateFlow<String> = _selectedCategory.asStateFlow()
 
     private val _currentIndex = MutableStateFlow(0)
@@ -36,7 +36,7 @@ class LearningViewModel @Inject constructor(
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
 
     init {
-        loadItems("动物")
+        loadItems("动物世界")
     }
 
     fun loadItems(category: String) {

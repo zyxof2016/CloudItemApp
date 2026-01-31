@@ -106,7 +106,10 @@ fun LearningScreen(
                 ) {
                     // 分类标签
                     CategoryTabs(
-                        categories = listOf("动物", "水果", "蔬菜", "交通工具", "日常用品"),
+                        categories = listOf(
+                            "动物世界", "美味水果", "新鲜蔬菜", "交通工具",
+                            "日常用品", "自然现象", "食物与饮料", "身体部位"
+                        ),
                         selectedCategory = selectedCategory,
                         onCategorySelected = { viewModel.loadItems(it) }
                     )

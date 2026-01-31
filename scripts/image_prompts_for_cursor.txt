@@ -1,0 +1,1423 @@
+================================================================================
+云朵识物乐园 - 图片生成清单（方案1：Cursor 手动生成）
+================================================================================
+
+【使用步骤】
+1. 在 Cursor 中使用图片生成功能（Composer 或聊天）
+2. 复制下方「完整提示词」到生成框
+3. 生成后保存为「文件名」列所示（如 cat.png）
+4. 将图片放入 app/src/main/res/drawable/
+
+【优化版 v3 含幼儿】去抽象词、简化细节、强化可爱、潜在恐吓动物加 adorable
+
+================================================================================
+
+------------------------------------------------------------
+【1】猫 (Cat)
+文件名: cat.png
+完整提示词:
+A cute fluffy ginger cat with big bright eyes, full body sitting from head to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【2】狗 (Dog)
+文件名: dog.png
+完整提示词:
+A happy golden retriever puppy with friendly smile, full body sitting from head to paws, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【3】兔子 (Rabbit)
+文件名: rabbit.png
+完整提示词:
+A soft white chubby bunny with a carrot, full body standing from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【4】小鸟 (Bird)
+文件名: bird.png
+完整提示词:
+A round adorable blue bird, full body with wings and tail visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【5】大象 (Elephant)
+文件名: elephant.png
+完整提示词:
+A friendly baby elephant with large ears, full body standing from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【6】老虎 (Tiger)
+文件名: tiger.png
+完整提示词:
+A cute tiny tiger cub with soft fur, full body sitting from head to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【7】狮子 (Lion)
+文件名: lion.png
+完整提示词:
+A cute baby lion with a fluffy mane, full body sitting from head to paws, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【8】长颈鹿 (Giraffe)
+文件名: giraffe.png
+完整提示词:
+A tall friendly giraffe with brown spots, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【9】斑马 (Zebra)
+文件名: zebra.png
+完整提示词:
+A sweet baby zebra with black stripes, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【10】猴子 (Monkey)
+文件名: monkey.png
+完整提示词:
+A playful little monkey hanging by tail, full body visible from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【11】熊猫 (Panda)
+文件名: panda.png
+完整提示词:
+A chubby black and white panda with bamboo, full body sitting from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【12】考拉 (Koala)
+文件名: koala.png
+完整提示词:
+A grey fuzzy koala hugging a branch, full body visible from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【13】企鹅 (Penguin)
+文件名: penguin.png
+完整提示词:
+A tiny round penguin with yellow beak, full body standing from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【14】猪 (Pig)
+文件名: pig.png
+完整提示词:
+A round pink piglet with a curly tail, full body standing from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【15】牛 (Cow)
+文件名: cow.png
+完整提示词:
+A friendly black and white spotted cow, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【16】羊 (Sheep)
+文件名: sheep.png
+完整提示词:
+A white fluffy sheep with soft wool, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【17】马 (Horse)
+文件名: horse.png
+完整提示词:
+A friendly small brown horse, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【18】鸡 (Chicken)
+文件名: chicken.png
+完整提示词:
+A round yellow mother hen, full body standing from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【19】鸭 (Duck)
+文件名: duck.png
+完整提示词:
+A bright yellow duckling with orange beak, full body standing from head to webbed feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【20】熊 (Bear)
+文件名: bear.png
+完整提示词:
+A soft brown bear with a round face, full body sitting from head to paws, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【21】狐狸 (Fox)
+文件名: fox.png
+完整提示词:
+A cute orange fox with a bushy tail, full body sitting from head to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【22】鹿 (Deer)
+文件名: deer.png
+完整提示词:
+A small brown deer with white spots, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【23】刺猬 (Hedgehog)
+文件名: hedgehog.png
+完整提示词:
+A tiny round hedgehog with soft prickles, full body visible from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【24】松鼠 (Squirrel)
+文件名: squirrel.png
+完整提示词:
+A bushy-tailed squirrel holding a nut, full body visible from head to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【25】骆驼 (Camel)
+文件名: camel.png
+完整提示词:
+A friendly camel with two humps, full body standing from head to hooves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【26】蛇 (Snake)
+文件名: snake.png
+完整提示词:
+An adorable cute green coiled snake with big round eyes, complete body in coil from head to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【27】鳄鱼 (Crocodile)
+文件名: crocodile.png
+完整提示词:
+An adorable small green crocodile with a big friendly smile, full body visible from snout to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【28】乌龟 (Turtle)
+文件名: turtle.png
+完整提示词:
+A slow green turtle with a patterned shell, full body visible from head to feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【29】青蛙 (Frog)
+文件名: frog.png
+完整提示词:
+A happy green frog on a lily pad, full body visible from head to webbed feet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【30】蝴蝶 (Butterfly)
+文件名: butterfly.png
+完整提示词:
+A colorful butterfly with patterned wings, complete butterfly with both wings fully visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【31】蜜蜂 (Bee)
+文件名: bee.png
+完整提示词:
+A fuzzy yellow and black honey bee, complete bee with wings and legs visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【32】瓢虫 (Ladybug)
+文件名: ladybug.png
+完整提示词:
+A small red ladybug with black spots, complete ladybug with wings and legs visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【33】螃蟹 (Crab)
+文件名: crab.png
+完整提示词:
+A red crab with two big claws, full body visible with all legs and claws, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【34】龙虾 (Lobster)
+文件名: lobster.png
+完整提示词:
+A long red lobster with big feelers, complete lobster from antennae to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【35】章鱼 (Octopus)
+文件名: octopus.png
+完整提示词:
+A purple octopus with eight wiggly arms, full body visible with all eight arms, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【36】鲸鱼 (Whale)
+文件名: whale.png
+完整提示词:
+A big blue whale spouting water, full body visible from head to tail fluke, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【37】海豚 (Dolphin)
+文件名: dolphin.png
+完整提示词:
+A sleek grey dolphin jumping from water, full body visible from snout to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【38】鲨鱼 (Shark)
+文件名: shark.png
+完整提示词:
+An adorable small grey shark with a big friendly grin, full body visible from snout to tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【39】海马 (Seahorse)
+文件名: seahorse.png
+完整提示词:
+A tiny colorful seahorse in water, complete seahorse from head to curled tail, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【40】水母 (Jellyfish)
+文件名: jellyfish.png
+完整提示词:
+A glowing pink translucent jellyfish, full body visible with bell and tentacles, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【41】苹果 (Apple)
+文件名: apple.png
+完整提示词:
+A complete shiny red round apple with a leaf, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【42】香蕉 (Banana)
+文件名: banana.png
+完整提示词:
+A complete bunch of bright yellow bananas, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【43】橙子 (Orange)
+文件名: orange.png
+完整提示词:
+A complete perfectly round orange fruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【44】葡萄 (Grape)
+文件名: grape.png
+完整提示词:
+A complete bunch of purple round grapes, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【45】西瓜 (Watermelon)
+文件名: watermelon.png
+完整提示词:
+A complete large round green striped watermelon, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【46】草莓 (Strawberry)
+文件名: strawberry.png
+完整提示词:
+A complete bright red strawberry with tiny seeds, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【47】菠萝 (Pineapple)
+文件名: pineapple.png
+完整提示词:
+A complete golden pineapple with a green crown, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【48】芒果 (Mango)
+文件名: mango.png
+完整提示词:
+A complete smooth yellow and red mango, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【49】梨 (Pear)
+文件名: pear.png
+完整提示词:
+A complete soft green pear with a narrow top, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【50】桃子 (Peach)
+文件名: peach.png
+完整提示词:
+A complete fuzzy pink and orange peach, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【51】樱桃 (Cherry)
+文件名: cherry.png
+完整提示词:
+A complete pair of bright red cherries with stem, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【52】蓝莓 (Blueberry)
+文件名: blueberry.png
+完整提示词:
+A complete cluster of small round dark blue berries, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【53】猕猴桃 (Kiwi)
+文件名: kiwi.png
+完整提示词:
+A complete fuzzy brown kiwi fruit sliced open, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【54】柠檬 (Lemon)
+文件名: lemon.png
+完整提示词:
+A complete bright yellow sour lemon, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【55】火龙果 (Dragonfruit)
+文件名: dragonfruit.png
+完整提示词:
+A complete pink dragonfruit with green scales, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【56】哈密瓜 (Melon)
+文件名: melon.png
+完整提示词:
+A complete pale green melon with textured skin, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【57】荔枝 (Lychee)
+文件名: lychee.png
+完整提示词:
+A complete small red bumpy lychee fruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【58】椰子 (Coconut)
+文件名: coconut.png
+完整提示词:
+A complete brown hairy coconut with palm leaf, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【59】石榴 (Pomegranate)
+文件名: pomegranate.png
+完整提示词:
+A complete red pomegranate with a small crown, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【60】柿子 (Persimmon)
+文件名: persimmon.png
+完整提示词:
+A complete bright orange persimmon fruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【61】山竹 (Mangosteen)
+文件名: mangosteen.png
+完整提示词:
+A complete dark purple mangosteen with green cap, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【62】柚子 (Pomelo)
+文件名: pomelo.png
+完整提示词:
+A complete large yellow round pomelo fruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【63】木瓜 (Papaya)
+文件名: papaya.png
+完整提示词:
+A complete long orange papaya fruit with seeds, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【64】杏子 (Apricot)
+文件名: apricot.png
+完整提示词:
+A complete small orange apricot with soft skin, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【65】李子 (Plum)
+文件名: plum.png
+完整提示词:
+A complete round dark purple juicy plum, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【66】无花果 (Fig)
+文件名: fig.png
+完整提示词:
+A complete purple pear-shaped fig sliced open, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【67】杨桃 (Starfruit)
+文件名: starfruit.png
+完整提示词:
+A complete yellow star-shaped starfruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【68】榴莲 (Durian)
+文件名: durian.png
+完整提示词:
+A complete large green spiky durian fruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【69】蓝莓 (Blueberry)
+文件名: blueberry_alt.png
+完整提示词:
+A complete small cluster of blue berries, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【70】覆盆子 (Raspberry)
+文件名: raspberry.png
+完整提示词:
+A complete small bumpy red raspberry fruit, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【71】胡萝卜 (Carrot)
+文件名: carrot.png
+完整提示词:
+A complete long orange carrot with green leaves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【72】白菜 (Cabbage)
+文件名: cabbage.png
+完整提示词:
+A complete round cabbage with crisp green leaves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【73】西红柿 (Tomato)
+文件名: tomato.png
+完整提示词:
+A complete plump bright red tomato with stem, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【74】西兰花 (Broccoli)
+文件名: broccoli.png
+完整提示词:
+A complete green broccoli tree-like vegetable, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【75】土豆 (Potato)
+文件名: potato.png
+完整提示词:
+A complete chunky brown potato with tiny eyes, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【76】黄瓜 (Cucumber)
+文件名: cucumber.png
+完整提示词:
+A complete long green bumpy cucumber, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【77】茄子 (Eggplant)
+文件名: eggplant.png
+完整提示词:
+A complete smooth shiny purple eggplant, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【78】玉米 (Corn)
+文件名: corn.png
+完整提示词:
+A complete yellow ear of corn with green husks, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【79】南瓜 (Pumpkin)
+文件名: pumpkin.png
+完整提示词:
+A complete large round orange pumpkin, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【80】洋葱 (Onion)
+文件名: onion.png
+完整提示词:
+A complete round purple onion with thin skin, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【81】大蒜 (Garlic)
+文件名: garlic.png
+完整提示词:
+A complete white bulb of garlic with cloves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【82】辣椒 (Chili)
+文件名: chili.png
+完整提示词:
+A complete bright red spicy chili pepper, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【83】蘑菇 (Mushroom)
+文件名: mushroom.png
+完整提示词:
+A complete cute red mushroom with white spots, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【84】豌豆 (Pea)
+文件名: pea.png
+完整提示词:
+A complete green pea pod with small round peas, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【85】菠菜 (Spinach)
+文件名: spinach.png
+完整提示词:
+A complete bunch of fresh green spinach leaves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【86】芹菜 (Celery)
+文件名: celery.png
+完整提示词:
+A complete bundle of long green celery stalks, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【87】萝卜 (Radish)
+文件名: radish.png
+完整提示词:
+A complete round pink and white radish, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【88】红薯 (Sweet Potato)
+文件名: sweet_potato.png
+完整提示词:
+A complete long purple-skinned sweet potato, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【89】苦瓜 (Bitter Gourd)
+文件名: bitter_gourd.png
+完整提示词:
+A complete long bumpy green bitter gourd, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【90】丝瓜 (Luffa)
+文件名: luffa.png
+完整提示词:
+A complete long green luffa with ridges, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【91】芦笋 (Asparagus)
+文件名: asparagus.png
+完整提示词:
+A complete bundle of thin green asparagus spears, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【92】甜椒 (Bell Pepper)
+文件名: bell_pepper.png
+完整提示词:
+A complete shiny green bell pepper, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【93】菜花 (Cauliflower)
+文件名: cauliflower.png
+完整提示词:
+A complete white cauliflower with green leaves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【94】豆角 (Green Bean)
+文件名: green_bean.png
+完整提示词:
+A complete pile of thin long green beans, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【95】莲藕 (Lotus Root)
+文件名: lotus_root.png
+完整提示词:
+A complete sliced lotus root with holes, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【96】竹笋 (Bamboo Shoot)
+文件名: bamboo_shoot.png
+完整提示词:
+A complete small brown bamboo shoot, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【97】山药 (Yam)
+文件名: yam.png
+完整提示词:
+A complete long brown thin yam root, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【98】冬瓜 (Wax Gourd)
+文件名: wax_gourd.png
+完整提示词:
+A complete large long green wax gourd, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【99】荷兰豆 (Snow Pea)
+文件名: snow_pea.png
+完整提示词:
+A complete flat green snow pea pod, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【100】生菜 (Lettuce)
+文件名: lettuce.png
+完整提示词:
+A complete bunch of light green wavy lettuce, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【101】汽车 (Car)
+文件名: car.png
+完整提示词:
+A complete small rounded red car, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【102】公交车 (Bus)
+文件名: bus.png
+完整提示词:
+A complete big yellow school bus, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【103】飞机 (Airplane)
+文件名: airplane.png
+完整提示词:
+A complete chubby blue and white airplane, full aircraft visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【104】自行车 (Bicycle)
+文件名: bicycle.png
+完整提示词:
+A complete cute green bicycle with a bell, full bicycle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【105】摩托车 (Motorcycle)
+文件名: motorcycle.png
+完整提示词:
+A complete cute red motorcycle, full motorcycle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【106】火车 (Train)
+文件名: train.png
+完整提示词:
+A complete colorful steam engine train, full train visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【107】高铁 (High-speed Train)
+文件名: high_speed_train.png
+完整提示词:
+A complete sleek white high-speed train, full train visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【108】轮船 (Ship)
+文件名: ship.png
+完整提示词:
+A complete large white cruise ship, full ship visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【109】潜水艇 (Submarine)
+文件名: submarine.png
+完整提示词:
+A complete yellow submarine with periscope, full submarine visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【110】直升机 (Helicopter)
+文件名: helicopter.png
+完整提示词:
+A complete cute little helicopter, full helicopter visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【111】救护车 (Ambulance)
+文件名: ambulance.png
+完整提示词:
+A complete white ambulance with red cross, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【112】消防车 (Firetruck)
+文件名: firetruck.png
+完整提示词:
+A complete big red fire truck with ladder, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【113】警车 (Police Car)
+文件名: police_car.png
+完整提示词:
+A complete blue and white police car, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【114】卡车 (Truck)
+文件名: truck.png
+完整提示词:
+A complete large delivery truck, full truck visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【115】拖拉机 (Tractor)
+文件名: tractor.png
+完整提示词:
+A complete green farm tractor, full tractor visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【116】热气球 (Hot Air Balloon)
+文件名: hot_air_balloon.png
+完整提示词:
+A complete colorful striped hot air balloon, full balloon visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【117】飞船 (Spaceship)
+文件名: spaceship.png
+完整提示词:
+A complete round silver UFO spaceship, full craft visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【118】坦克 (Tank)
+文件名: tank.png
+完整提示词:
+A complete small green toy tank, full tank visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【119】挖掘机 (Excavator)
+文件名: excavator.png
+完整提示词:
+A complete yellow construction excavator, full machine visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【120】帆船 (Sailboat)
+文件名: sailboat.png
+完整提示词:
+A complete small wooden sailboat with sail, full boat visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【121】出租车 (Taxi)
+文件名: taxi.png
+完整提示词:
+A complete yellow city taxi with checkers, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【122】吊车 (Crane)
+文件名: crane.png
+完整提示词:
+A complete big yellow crane truck with hook, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【123】缆车 (Cable Car)
+文件名: cable_car.png
+完整提示词:
+A complete red cable car hanging on a wire, full car visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【124】划艇 (Canoe)
+文件名: canoe.png
+完整提示词:
+A complete small wooden canoe with a paddle, full canoe visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【125】飞艇 (Airship)
+文件名: airship.png
+完整提示词:
+A complete big silver oval airship, full airship visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【126】三轮车 (Tricycle)
+文件名: tricycle.png
+完整提示词:
+A complete small colorful kids tricycle, full tricycle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【127】滑板 (Skateboard)
+文件名: skateboard.png
+完整提示词:
+A complete cute wooden skateboard with wheels, full skateboard visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【128】压路机 (Steam Roller)
+文件名: steam_roller.png
+完整提示词:
+A complete yellow steam roller construction car, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【129】垃圾车 (Garbage Truck)
+文件名: garbage_truck.png
+完整提示词:
+A complete big green garbage truck, full truck visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【130】拖船 (Tugboat)
+文件名: tugboat.png
+完整提示词:
+A complete small strong red tugboat, full boat visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【131】叉车 (Forklift)
+文件名: forklift.png
+完整提示词:
+A complete small yellow forklift with forks, full forklift visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【132】赛车 (Racing Car)
+文件名: racing_car.png
+完整提示词:
+A complete fast red racing car with numbers, full car visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【133】房车 (RV)
+文件名: rv.png
+完整提示词:
+A complete big white rv motorhome, full vehicle visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【134】直升飞机 (Chopper)
+文件名: chopper.png
+完整提示词:
+A complete small black helicopter, full helicopter visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【135】电动车 (E-bike)
+文件名: ebike.png
+完整提示词:
+A complete small pink electric scooter, full scooter visible, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【136】铅笔 (Pencil)
+文件名: pencil.png
+完整提示词:
+A complete long yellow pencil with eraser, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【137】杯子 (Cup)
+文件名: cup.png
+完整提示词:
+A complete chunky blue ceramic cup, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【138】书本 (Book)
+文件名: book.png
+完整提示词:
+A complete thick colorful book, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【139】书包 (Schoolbag)
+文件名: schoolbag.png
+完整提示词:
+A complete cute blue backpack, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【140】牙刷 (Toothbrush)
+文件名: toothbrush.png
+完整提示词:
+A complete small green toothbrush, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【141】毛巾 (Towel)
+文件名: towel.png
+完整提示词:
+A complete soft folded fluffy white towel, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【142】梳子 (Comb)
+文件名: comb.png
+完整提示词:
+A complete small red hair comb, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【143】镜子 (Mirror)
+文件名: mirror.png
+完整提示词:
+A complete small hand mirror with handle, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【144】伞 (Umbrella)
+文件名: umbrella.png
+完整提示词:
+A complete bright yellow opened umbrella, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【145】帽子 (Hat)
+文件名: hat.png
+完整提示词:
+A complete cute blue baseball cap, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【146】鞋子 (Shoes)
+文件名: shoes.png
+完整提示词:
+A complete pair of small colorful sneakers, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【147】衣服 (Clothes)
+文件名: clothes.png
+完整提示词:
+A complete small cute t-shirt with a sun, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【148】床 (Bed)
+文件名: bed.png
+完整提示词:
+A complete cozy bed with soft pillow, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【149】椅子 (Chair)
+文件名: chair.png
+完整提示词:
+A complete small wooden chair, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【150】桌子 (Desk)
+文件名: desk.png
+完整提示词:
+A complete sturdy wooden desk, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【151】灯 (Lamp)
+文件名: lamp.png
+完整提示词:
+A complete small desk lamp with shade, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【152】电视 (TV)
+文件名: tv.png
+完整提示词:
+A complete flat screen television, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【153】手机 (Phone)
+文件名: phone.png
+完整提示词:
+A complete modern smartphone, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【154】电脑 (Computer)
+文件名: computer.png
+完整提示词:
+A complete desktop computer with monitor, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【155】钟表 (Clock)
+文件名: clock.png
+完整提示词:
+A complete round wall clock, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【156】剪刀 (Scissors)
+文件名: scissors.png
+完整提示词:
+A complete pair of small safety scissors, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【157】肥皂 (Soap)
+文件名: soap.png
+完整提示词:
+A complete bar of pink bubbly soap, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【158】盆 (Basin)
+文件名: basin.png
+完整提示词:
+A complete small round plastic basin, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【159】拖鞋 (Slippers)
+文件名: slippers.png
+完整提示词:
+A complete pair of soft fuzzy slippers, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【160】袜子 (Socks)
+文件名: socks.png
+完整提示词:
+A complete pair of striped colorful socks, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【161】碗 (Bowl)
+文件名: bowl.png
+完整提示词:
+A complete round ceramic cereal bowl, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【162】勺子 (Spoon)
+文件名: spoon.png
+完整提示词:
+A complete small shiny silver spoon, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【163】筷子 (Chopsticks)
+文件名: chopsticks.png
+完整提示词:
+A complete pair of wooden chopsticks, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【164】叉子 (Fork)
+文件名: fork.png
+完整提示词:
+A complete small shiny silver fork, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【165】锅 (Pot)
+文件名: pot.png
+完整提示词:
+A complete metal cooking pot with a lid, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【166】冰箱 (Fridge)
+文件名: fridge.png
+完整提示词:
+A complete big silver refrigerator, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【167】洗衣机 (Washing Machine)
+文件名: washing_machine.png
+完整提示词:
+A complete white front-load washing machine, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【168】空调 (Air Conditioner)
+文件名: air_conditioner.png
+完整提示词:
+A complete white wall-mounted air conditioner, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【169】风扇 (Fan)
+文件名: fan.png
+完整提示词:
+A complete small desk fan with blue blades, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【170】吹风机 (Hairdryer)
+文件名: hairdryer.png
+完整提示词:
+A complete small red hairdryer, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【171】钥匙 (Key)
+文件名: key.png
+完整提示词:
+A complete shiny gold key on a ring, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【172】钱包 (Wallet)
+文件名: wallet.png
+完整提示词:
+A complete small brown leather wallet, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【173】纸巾 (Tissue)
+文件名: tissue.png
+完整提示词:
+A complete box of soft white tissues, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【174】玩具熊 (Teddy Bear)
+文件名: teddy_bear.png
+完整提示词:
+A complete soft brown teddy bear, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【175】积木 (Blocks)
+文件名: blocks.png
+完整提示词:
+A complete pile of colorful wooden blocks, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【176】太阳 (Sun)
+文件名: sun.png
+完整提示词:
+A complete bright happy yellow sun with rays, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【177】月亮 (Moon)
+文件名: moon.png
+完整提示词:
+A complete yellow crescent moon with a face, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【178】星星 (Star)
+文件名: star.png
+完整提示词:
+A complete glowing yellow 3D star, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【179】云朵 (Cloud)
+文件名: cloud.png
+完整提示词:
+A complete soft fluffy white cloud, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【180】彩虹 (Rainbow)
+文件名: rainbow.png
+完整提示词:
+A complete colorful arched rainbow with clouds, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【181】雨 (Rain)
+文件名: rain.png
+完整提示词:
+A complete scene of small blue rain drops falling, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【182】雪 (Snow)
+文件名: snow.png
+完整提示词:
+A complete white snowflake with simple pretty pattern, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【183】风 (Wind)
+文件名: wind.png
+完整提示词:
+A complete soft white swirls representing wind, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【184】雷电 (Lightning)
+文件名: lightning.png
+完整提示词:
+A complete soft stylized yellow lightning bolt, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【185】大山 (Mountain)
+文件名: mountain.png
+完整提示词:
+A complete tall mountain with snow on top, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【186】大海 (Ocean)
+文件名: ocean.png
+完整提示词:
+A complete blue ocean waves with white foam, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【187】森林 (Forest)
+文件名: forest.png
+完整提示词:
+A complete group of green pine trees, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【188】花朵 (Flower)
+文件名: flower.png
+完整提示词:
+A complete bright pink flower with green leaves, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【189】草地 (Grass)
+文件名: grass.png
+完整提示词:
+A complete patch of soft green grass, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【190】树木 (Tree)
+文件名: tree.png
+完整提示词:
+A complete big tree with green leaves and trunk, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【191】河流 (River)
+文件名: river.png
+完整提示词:
+A complete winding blue river with small rocks, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【192】湖泊 (Lake)
+文件名: lake.png
+完整提示词:
+A complete calm blue lake with reflection, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【193】火 (Fire)
+文件名: fire.png
+完整提示词:
+A complete small warm orange campfire, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【194】岩石 (Rock)
+文件名: rock.png
+完整提示词:
+A complete smooth grey round rock, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【195】岛屿 (Island)
+文件名: island.png
+完整提示词:
+A complete small island with a palm tree, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【196】面包 (Bread)
+文件名: bread.png
+完整提示词:
+A complete loaf of fresh brown bread, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【197】牛奶 (Milk)
+文件名: milk.png
+完整提示词:
+A complete carton of fresh white milk, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【198】鸡蛋 (Egg)
+文件名: egg.png
+完整提示词:
+A complete white egg in a small cup, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【199】蛋糕 (Cake)
+文件名: cake.png
+完整提示词:
+A complete colorful birthday cake with candles, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【200】饼干 (Cookie)
+文件名: cookie.png
+完整提示词:
+A complete round chocolate chip cookie, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【201】糖果 (Candy)
+文件名: candy.png
+完整提示词:
+A complete colorful wrapped sweet candy, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【202】冰淇淋 (Ice Cream)
+文件名: ice_cream.png
+完整提示词:
+A complete pink ice cream cone with sprinkles, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【203】果汁 (Juice)
+文件名: juice.png
+完整提示词:
+A complete glass of orange juice with a straw, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【204】水 (Water)
+文件名: water.png
+完整提示词:
+A complete glass of clear pure water, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【205】汉堡 (Burger)
+文件名: burger.png
+完整提示词:
+A complete big burger with cheese and lettuce, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【206】薯条 (Fries)
+文件名: fries.png
+完整提示词:
+A complete box of golden crispy french fries, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【207】披萨 (Pizza)
+文件名: pizza.png
+完整提示词:
+A complete slice of cheesy pepperoni pizza, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【208】面条 (Noodles)
+文件名: noodles.png
+完整提示词:
+A complete bowl of yellow noodles with egg, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【209】米饭 (Rice)
+文件名: rice.png
+完整提示词:
+A complete bowl of fluffy white rice, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【210】包子 (Steamed Bun)
+文件名: steamed_bun.png
+完整提示词:
+A complete white fluffy steamed bun, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【211】饺子 (Dumpling)
+文件名: dumpling.png
+完整提示词:
+A complete plate of small white dumplings, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【212】巧克力 (Chocolate)
+文件名: chocolate.png
+完整提示词:
+A complete bar of brown chocolate, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【213】甜甜圈 (Donut)
+文件名: donut.png
+完整提示词:
+A complete pink glazed donut with sprinkles, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【214】三明治 (Sandwich)
+文件名: sandwich.png
+完整提示词:
+A complete triangle sandwich with ham, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【215】寿司 (Sushi)
+文件名: sushi.png
+完整提示词:
+A complete piece of sushi with fish and rice, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【216】汤 (Soup)
+文件名: soup.png
+完整提示词:
+A complete warm bowl of vegetable soup, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【217】蜂蜜 (Honey)
+文件名: honey.png
+完整提示词:
+A complete jar of golden sweet honey, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【218】奶酪 (Cheese)
+文件名: cheese.png
+完整提示词:
+A complete wedge of yellow Swiss cheese, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【219】爆米花 (Popcorn)
+文件名: popcorn.png
+完整提示词:
+A complete bucket of white fluffy popcorn, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【220】棒棒糖 (Lollipop)
+文件名: lollipop.png
+完整提示词:
+A complete colorful swirled lollipop, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【221】眼睛 (Eyes)
+文件名: eyes.png
+完整提示词:
+A complete pair of big bright twinkling eyes, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【222】鼻子 (Nose)
+文件名: nose.png
+完整提示词:
+A complete small cute button nose, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【223】嘴巴 (Mouth)
+文件名: mouth.png
+完整提示词:
+A complete happy smiling mouth with red lips, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【224】耳朵 (Ears)
+文件名: ears.png
+完整提示词:
+A complete pair of small rounded ears, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【225】头发 (Hair)
+文件名: hair.png
+完整提示词:
+A complete bunch of soft brown wavy hair, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【226】手 (Hand)
+文件名: hand.png
+完整提示词:
+A complete small waving hand with five fingers, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【227】脚 (Foot)
+文件名: foot.png
+完整提示词:
+A complete small foot with five tiny toes, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【228】胳膊 (Arm)
+文件名: arm.png
+完整提示词:
+A complete strong small arm with a hand, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【229】腿 (Leg)
+文件名: leg.png
+完整提示词:
+A complete long leg with a small foot, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【230】头 (Head)
+文件名: head.png
+完整提示词:
+A complete round head with a happy face, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【231】手指 (Finger)
+文件名: finger.png
+完整提示词:
+A complete small pointing index finger, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【232】牙齿 (Teeth)
+文件名: teeth.png
+完整提示词:
+A complete row of white shiny clean teeth, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【233】舌头 (Tongue)
+文件名: tongue.png
+完整提示词:
+A complete small pink sticking-out tongue, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【234】肩膀 (Shoulder)
+文件名: shoulder.png
+完整提示词:
+A complete small rounded shoulder, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1
+
+------------------------------------------------------------
+【235】肚子 (Tummy)
+文件名: tummy.png
+完整提示词:
+A complete round soft tummy, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1

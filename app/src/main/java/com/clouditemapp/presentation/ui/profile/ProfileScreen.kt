@@ -8,6 +8,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -17,13 +19,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.clouditemapp.presentation.viewmodel.ProfileViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
-    navController: NavController
+    navController: NavController,
+    viewModel: ProfileViewModel = hiltViewModel()
 ) {
+    val profileState by viewModel.profileState.collectAsState()
     val skyGradient = Brush.verticalGradient(
         colors = listOf(
             Color(0xFFE0F7FA),
@@ -93,7 +99,7 @@ fun ProfileScreen(
                     )
                 ) {
                     Text(
-                        text = "🌟 Level 5",
+                        text = "🌟 Level ${profileState.level}",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
@@ -104,28 +110,35 @@ fun ProfileScreen(
                 Spacer(modifier = Modifier.height(32.dp))
 
                 // 统计卡片
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    StatCard(
-                        modifier = Modifier.weight(1f),
-                        icon = "📚",
-                        label = "已学习",
-                        value = "45"
+                if (profileState.isLoading) {
+                    CircularProgressIndicator(
+                        color = Color(0xFF0277BD),
+                        modifier = Modifier.size(48.dp)
                     )
-                    StatCard(
-                        modifier = Modifier.weight(1f),
-                        icon = "🎮",
-                        label = "游戏次数",
-                        value = "12"
-                    )
-                    StatCard(
-                        modifier = Modifier.weight(1f),
-                        icon = "⭐",
-                        label = "星星",
-                        value = "128"
-                    )
+                } else {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        StatCard(
+                            modifier = Modifier.weight(1f),
+                            icon = "📚",
+                            label = "已学习",
+                            value = "${profileState.learnedCount}"
+                        )
+                        StatCard(
+                            modifier = Modifier.weight(1f),
+                            icon = "🎮",
+                            label = "游戏次数",
+                            value = "${profileState.gameCount}"
+                        )
+                        StatCard(
+                            modifier = Modifier.weight(1f),
+                            icon = "⭐",
+                            label = "星星",
+                            value = "${profileState.stars}"
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
@@ -141,8 +154,8 @@ fun ProfileScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // 成就列表
-                AchievementGrid()
+                // 成就列表（来自数据库）
+                AchievementGrid(achievements = profileState.achievements)
             }
         }
     }
@@ -197,20 +210,16 @@ fun StatCard(
 }
 
 @Composable
-fun AchievementGrid() {
-    val achievements = listOf(
-        AchievementItem("初次探索", "完成第一次学习", "🎯", true),
-        AchievementItem("学习达人", "学习10个物品", "📚", true),
-        AchievementItem("游戏高手", "完成5次游戏", "🎮", true),
-        AchievementItem("连续学习", "连续学习3天", "🔥", false),
-        AchievementItem("全知全能", "学习所有分类", "🌟", false),
-        AchievementItem("完美答案", "连续答对10题", "💯", false)
-    )
-
+fun AchievementGrid(
+    achievements: List<com.clouditemapp.domain.model.Achievement>
+) {
+    val items = achievements.map { a ->
+        AchievementItem(a.name, a.description, a.iconRes, a.unlocked)
+    }
     Column(
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        achievements.chunked(2).forEach { row ->
+        items.chunked(2).forEach { row ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(12.dp)

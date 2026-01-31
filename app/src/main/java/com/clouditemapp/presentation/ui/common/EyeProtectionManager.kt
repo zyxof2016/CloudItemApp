@@ -96,11 +96,20 @@ fun EyeProtectionDialog(
                     modifier = Modifier.padding(24.dp)
                 ) {
                     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.loading))
-                    LottieAnimation(
-                        composition = composition,
-                        iterations = LottieConstants.IterateForever,
-                        modifier = Modifier.size(250.dp)
-                    )
+                    Box(
+                        modifier = Modifier.size(250.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        if (composition != null) {
+                            LottieAnimation(
+                                composition = composition,
+                                iterations = LottieConstants.IterateForever,
+                                modifier = Modifier.fillMaxSize()
+                            )
+                        } else {
+                            Text(text = "☁️", fontSize = 120.sp)
+                        }
+                    }
 
                     Spacer(modifier = Modifier.height(32.dp))
 
