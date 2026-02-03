@@ -45,7 +45,8 @@ fun GameScreen(
     val score by viewModel.score.collectAsState()
     val totalQuestions by viewModel.totalQuestions.collectAsState()
     val currentIndex by viewModel.currentIndex.collectAsState()
-    val currentItem by remember { derivedStateOf { viewModel.getCurrentItem() } }
+    val currentItems by viewModel.currentItems.collectAsState()
+    val currentItem = currentItems.getOrNull(currentIndex)
 
     val skyGradient = Brush.verticalGradient(
         colors = listOf(
@@ -489,15 +490,39 @@ fun GamePlay(
                     contentAlignment = Alignment.Center
                 ) {
                     if (currentGameType == "guess") {
-                        // 提示文字 (较大)
-                        Text(
-                            text = item.descriptionCN,
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFF546E7A),
-                            textAlign = TextAlign.Center,
-                            lineHeight = 32.sp
+                        // 提示文字 (较大，居中，有呼吸效果)
+                        val infiniteTransition = rememberInfiniteTransition(label = "hint")
+                        val hintScale by infiniteTransition.animateFloat(
+                            initialValue = 1f,
+                            targetValue = 1.02f,
+                            animationSpec = infiniteRepeatable(
+                                animation = tween(1000, easing = LinearEasing),
+                                repeatMode = RepeatMode.Reverse
+                            ),
+                            label = "hintScale"
                         )
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            modifier = Modifier.clickable { viewModel.playCurrentItemDescriptionAudio() }
+                        ) {
+                            Text(
+                                text = item.descriptionCN,
+                                fontSize = 28.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF0277BD),
+                                textAlign = TextAlign.Center,
+                                lineHeight = 38.sp,
+                                modifier = Modifier
+                                    .padding(16.dp)
+                                    .scale(hintScale)
+                            )
+                            Icon(
+                                Icons.Default.VolumeUp,
+                                contentDescription = "播放描述",
+                                tint = Color(0xFF0277BD).copy(alpha = 0.5f),
+                                modifier = Modifier.size(24.dp)
+                            )
+                        }
                     } else {
                         // 播放按钮 (很大，适合幼儿)
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {

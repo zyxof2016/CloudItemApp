@@ -57,6 +57,7 @@ private fun ItemEntity.toDomainModel(): Item {
         imageRes = imageRes,
         audioCN = audioCN,
         audioEN = audioEN,
+        audioDescCN = audioDescCN,
         features = parseJsonList(features),
         scenarios = parseJsonList(scenarios)
     )

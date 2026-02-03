@@ -11,6 +11,7 @@ data class Item(
     val imageRes: String,
     val audioCN: String,
     val audioEN: String,
+    val audioDescCN: String,
     val features: List<String>,
     val scenarios: List<String>
 )

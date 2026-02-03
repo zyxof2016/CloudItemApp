@@ -86,27 +86,31 @@ class GameViewModel @Inject constructor(
                 getRandomItemsUseCase(itemCount)
             }
 
-            flow.collect { items ->
-                if (items.isNotEmpty()) {
-                    // 如果是按分类开始，打乱顺序并取前 itemCount 个，或者全部（如果 itemCount 为 -1）
-                    val finalItems = if (category != null && category != "全部随机") {
-                        items.shuffled().take(if (itemCount > 0) itemCount else items.size)
-                    } else {
-                        items
-                    }
+            // 使用 first() 确保只获取一次快照，避免数据库变化导致游戏重置
+            val items = flow.first()
+            if (items.isNotEmpty()) {
+                val finalItems = if (category != null && category != "全部随机") {
+                    items.shuffled().take(if (itemCount > 0) itemCount else items.size)
+                } else {
+                    items
+                }
 
-                    _currentItems.value = finalItems
-                    _currentIndex.value = 0
-                    _score.value = 0
-                    _correctCount.value = 0
-                    _totalQuestions.value = finalItems.size
-                    gameStartTime = System.currentTimeMillis()
-                    generateOptions()
-                    _gameState.value = GameState.Playing
-                    
-                    if (_currentGameType.value == "listen") {
-                        playCurrentItemAudio()
-                    }
+                _currentItems.value = finalItems
+                _currentIndex.value = 0
+                _score.value = 0
+                _correctCount.value = 0
+                _totalQuestions.value = finalItems.size
+                gameStartTime = System.currentTimeMillis()
+                
+                // 先生成第一题的选项
+                updateOptionsSync()
+                
+                _gameState.value = GameState.Playing
+                
+                if (_currentGameType.value == "listen") {
+                    playCurrentItemAudio()
+                } else if (_currentGameType.value == "guess") {
+                    playCurrentItemDescriptionAudio()
                 }
             }
         }
@@ -117,19 +121,21 @@ class GameViewModel @Inject constructor(
         audioManager.playSound(item.audioCN)
     }
 
-    private fun generateOptions() {
+    fun playCurrentItemDescriptionAudio() {
+        val item = getCurrentItem() ?: return
+        audioManager.playSound(item.audioDescCN)
+    }
+
+    private suspend fun updateOptionsSync() {
         val currentItem = getCurrentItem() ?: return
-        viewModelScope.launch {
-            // 获取一些随机物品作为干扰项
-            getRandomItemsUseCase(20).collect { allRandomItems ->
-                val distractors = allRandomItems
-                    .filter { it.id != currentItem.id }
-                    .distinctBy { it.nameCN }
-                    .take(3)
-                
-                _options.value = (distractors + currentItem).shuffled()
-            }
-        }
+        // 获取干扰项，使用 first() 获取单次快照
+        val allRandomItems = getRandomItemsUseCase(30).first()
+        val distractors = allRandomItems
+            .filter { it.id != currentItem.id }
+            .distinctBy { it.nameCN }
+            .take(3)
+        
+        _options.value = (distractors + currentItem).shuffled()
     }
 
     fun answer(isCorrect: Boolean) {
@@ -142,15 +148,18 @@ class GameViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            // 延迟一小会儿让用户看清结果 (给反馈声音留出时间)
+            // 延迟一小会儿让用户看清结果
             kotlinx.coroutines.delay(1000)
-            if (_currentIndex.value < _currentItems.value.size - 1) {
-                _currentIndex.value++
-                generateOptions() // 为下一题生成新选项
-                if (_currentGameType.value == "listen") {
-                    playCurrentItemAudio()
-                }
-            } else {
+                if (_currentIndex.value < _currentItems.value.size - 1) {
+                    _currentIndex.value++
+                    // 关键修复：必须等待选项生成完成后再允许用户操作或播放音频
+                    updateOptionsSync()
+                    if (_currentGameType.value == "listen") {
+                        playCurrentItemAudio()
+                    } else if (_currentGameType.value == "guess") {
+                        playCurrentItemDescriptionAudio()
+                    }
+                } else {
                 endGame()
             }
         }
