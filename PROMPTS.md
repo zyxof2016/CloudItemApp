@@ -3,6 +3,12 @@
 本文档提供符合 README 规划的 **235个核心识物物品** 的 AI 生成提示词。
 
 ## 🎨 核心风格定义 (Core Style)
+
+### 优化版 v3 含幼儿（推荐：2-6岁认知审美、去抽象词、简化细节）
+*   **统一后缀**：`, complete in frame no cropping, centered composition, cute 3D clay style, toddler-friendly educational illustration, bright vibrant primary colors, soft studio lighting, theme-fitting soft gradient background, rounded edges friendly, simple clear shapes, comfortable negative space, no watermark, clean, masterpiece, clear simple details, square 1:1, --ar 1:1`
+*   **主体描述**：动物类加 `full body`, `cute/friendly`（去 brave/majestic）；蛇/鳄鱼/鲨鱼加 `adorable`；物体类加 `complete`；避免 `cool`/`military` 等抽象或敏感词
+
+### 原版（白底抠图风格）
 *   **统一后缀**：`, children's educational illustration, cute 3D clay style, bright and vibrant colors, soft studio lighting, high resolution, isolated on white background, rounded edges, friendly appearance, masterpiece, high detail, --ar 1:1`
 
 ---

@@ -8,6 +8,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -138,6 +140,30 @@ fun ProfileScreen(
                         label = "星星",
                         value = "${stats.totalStars}"
                     )
+                } else {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        StatCard(
+                            modifier = Modifier.weight(1f),
+                            icon = "📚",
+                            label = "已学习",
+                            value = "${profileState.learnedCount}"
+                        )
+                        StatCard(
+                            modifier = Modifier.weight(1f),
+                            icon = "🎮",
+                            label = "游戏次数",
+                            value = "${profileState.gameCount}"
+                        )
+                        StatCard(
+                            modifier = Modifier.weight(1f),
+                            icon = "⭐",
+                            label = "星星",
+                            value = "${profileState.stars}"
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))

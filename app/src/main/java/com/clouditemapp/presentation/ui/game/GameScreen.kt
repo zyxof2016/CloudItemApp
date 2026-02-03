@@ -650,13 +650,20 @@ fun GameResult(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Lottie 动画展示
-        Box(modifier = Modifier.size(200.dp)) {
-            LottieAnimation(
-                composition = composition,
-                progress = { progress },
-                modifier = Modifier.fillMaxSize()
-            )
+        // Lottie 动画展示（无效/空 JSON 时显示占位）
+        Box(
+            modifier = Modifier.size(200.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            if (composition != null) {
+                LottieAnimation(
+                    composition = composition,
+                    progress = { progress },
+                    modifier = Modifier.fillMaxSize()
+                )
+            } else {
+                Text(text = "🎉", fontSize = 120.sp)
+            }
         }
 
         Spacer(modifier = Modifier.height(24.dp))
