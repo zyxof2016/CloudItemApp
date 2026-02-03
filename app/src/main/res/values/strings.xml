@@ -31,11 +31,16 @@
     <string name="category_body">身体</string>
     
     <!-- Game Screen -->
-    <string name="game_menu">🎯 猜猜看游戏</string>
-    <string name="game_menu_desc">根据物品特征，猜猜是什么</string>
+    <string name="game_menu">🎯 趣味游戏</string>
+    <string name="game_menu_desc">边玩边学，快乐成长</string>
+    <string name="game_mode_guess">🔍 猜猜看</string>
+    <string name="game_mode_guess_desc">根据物品特征，猜猜是什么</string>
+    <string name="game_mode_listen">👂 听音识图</string>
+    <string name="game_mode_listen_desc">听听声音，选出正确的物品</string>
     <string name="start_game">🚀 开始游戏</string>
     <string name="click_to_start">点击开始挑战</string>
-    <string name="question">这是什么？</string>
+    <string name="question_guess">这是什么？</string>
+    <string name="question_listen">听听是什么？</string>
     <string name="hint">提示:</string>
     <string name="score">得分</string>
     <string name="correct_rate">正确率</string>

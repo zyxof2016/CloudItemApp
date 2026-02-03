@@ -26,7 +26,7 @@ class LearningViewModel @Inject constructor(
     private val _items = MutableStateFlow<List<Item>>(emptyList())
     val items: StateFlow<List<Item>> = _items.asStateFlow()
 
-    private val _selectedCategory = MutableStateFlow("动物")
+    private val _selectedCategory = MutableStateFlow("动物世界")
     val selectedCategory: StateFlow<String> = _selectedCategory.asStateFlow()
 
     private val _currentIndex = MutableStateFlow(0)
@@ -36,7 +36,7 @@ class LearningViewModel @Inject constructor(
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
 
     init {
-        loadItems("动物")
+        loadItems("动物世界")
     }
 
     fun loadItems(category: String) {
@@ -45,6 +45,9 @@ class LearningViewModel @Inject constructor(
             _currentIndex.value = 0
             getItemsByCategoryUseCase(category).collect { itemList ->
                 _items.value = itemList
+                if (itemList.isNotEmpty()) {
+                    playCurrentAudio()
+                }
             }
         }
     }
@@ -55,6 +58,9 @@ class LearningViewModel @Inject constructor(
             _currentIndex.value = 0
             getRandomItemsUseCase(limit).collect { itemList ->
                 _items.value = itemList
+                if (itemList.isNotEmpty()) {
+                    playCurrentAudio()
+                }
             }
         }
     }
@@ -62,21 +68,34 @@ class LearningViewModel @Inject constructor(
     fun nextItem() {
         if (_currentIndex.value < _items.value.size - 1) {
             _currentIndex.value++
-            stopAudio()
+            playCurrentAudio()
         }
     }
 
     fun previousItem() {
         if (_currentIndex.value > 0) {
             _currentIndex.value--
-            stopAudio()
+            playCurrentAudio()
         }
     }
 
     fun goToItem(index: Int) {
         if (index in _items.value.indices) {
             _currentIndex.value = index
-            stopAudio()
+            playCurrentAudio()
+        }
+    }
+
+    private fun playCurrentAudio() {
+        stopAudio()
+        val item = getCurrentItem() ?: return
+        viewModelScope.launch {
+            // 稍微延迟一下，确保界面已经切换
+            kotlinx.coroutines.delay(300)
+            _isPlaying.value = true
+            audioManager.playSound(item.audioCN) {
+                _isPlaying.value = false
+            }
         }
     }
 
@@ -98,7 +117,9 @@ class LearningViewModel @Inject constructor(
             stopAudio()
         } else {
             _isPlaying.value = true
-            audioManager.playSound(item.audioCN)
+            audioManager.playSound(item.audioCN) {
+                _isPlaying.value = false
+            }
         }
     }
 

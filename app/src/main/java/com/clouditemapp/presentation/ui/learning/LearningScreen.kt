@@ -5,6 +5,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,15 +26,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.clouditemapp.R
 import com.clouditemapp.presentation.ui.common.WindowSizeClass
 import com.clouditemapp.presentation.ui.common.rememberWindowSizeClass
+import com.clouditemapp.presentation.ui.common.ResourceUtils
 import com.clouditemapp.presentation.viewmodel.LearningViewModel
 
 import androidx.compose.ui.platform.LocalContext
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun LearningScreen(
     navController: NavController,
@@ -45,6 +49,25 @@ fun LearningScreen(
     val windowSize = rememberWindowSizeClass()
 
     val currentItem = viewModel.getCurrentItem()
+
+    // 状态管理：PagerState 与 ViewModel 的 currentIndex 同步
+    val pagerState = rememberPagerState(initialPage = 0) {
+        items.size
+    }
+
+    // 当 ViewModel 中的 currentIndex 改变时（例如通过分类切换或按钮点击），更新 PagerState
+    LaunchedEffect(currentIndex) {
+        if (pagerState.currentPage != currentIndex && items.isNotEmpty()) {
+            pagerState.animateScrollToPage(currentIndex)
+        }
+    }
+
+    // 当用户手动滑动 Pager 时，更新 ViewModel 中的 currentIndex
+    LaunchedEffect(pagerState.currentPage) {
+        if (items.isNotEmpty() && pagerState.currentPage != currentIndex) {
+            viewModel.goToItem(pagerState.currentPage)
+        }
+    }
 
     // 点击动画
     val scale by animateFloatAsState(
@@ -106,7 +129,7 @@ fun LearningScreen(
                 ) {
                     // 分类标签
                     CategoryTabs(
-                        categories = listOf("动物", "水果", "蔬菜", "交通工具", "日常用品"),
+                        categories = listOf("动物世界", "美味水果", "新鲜蔬菜", "交通工具", "日常用品", "自然现象", "食物与饮料", "身体部位"),
                         selectedCategory = selectedCategory,
                         onCategorySelected = { viewModel.loadItems(it) }
                     )
@@ -115,43 +138,53 @@ fun LearningScreen(
 
                     if (windowSize == WindowSizeClass.Expanded) {
                         // 平板宽屏布局：左右分栏
-                        Row(
+                        HorizontalPager(
+                            state = pagerState,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .weight(1f),
-                            horizontalArrangement = Arrangement.spacedBy(24.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Box(modifier = Modifier.weight(1f)) {
-                                currentItem?.let { item ->
+                            contentPadding = PaddingValues(horizontal = 32.dp),
+                            pageSpacing = 24.dp
+                        ) { page ->
+                            val item = items[page]
+                            Row(
+                                modifier = Modifier.fillMaxSize(),
+                                horizontalArrangement = Arrangement.spacedBy(24.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(modifier = Modifier.weight(1f)) {
                                     ItemImage(
                                         item = item,
-                                        scale = scale,
+                                        scale = if (page == currentIndex) scale else 1f,
                                         onPlayClick = { viewModel.togglePlaying() }
                                     )
                                 }
-                            }
-                            Box(modifier = Modifier.weight(1f)) {
-                                currentItem?.let { item ->
+                                Box(modifier = Modifier.weight(1f)) {
                                     ItemInfo(
                                         item = item,
                                         onPlayClick = { viewModel.togglePlaying() },
-                                        isPlaying = isPlaying
+                                        isPlaying = if (page == currentIndex) isPlaying else false
                                     )
                                 }
                             }
                         }
                     } else {
-                        // 手机窄屏布局：垂直堆叠
-                        Box(modifier = Modifier.weight(1f)) {
-                            currentItem?.let { item ->
-                                ItemCard(
-                                    item = item,
-                                    scale = scale,
-                                    onPlayClick = { viewModel.togglePlaying() },
-                                    isPlaying = isPlaying
-                                )
-                            }
+                        // 手机窄屏布局：使用 Pager 实现左右滑动
+                        HorizontalPager(
+                            state = pagerState,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .weight(1f),
+                            contentPadding = PaddingValues(horizontal = 16.dp),
+                            pageSpacing = 16.dp
+                        ) { page ->
+                            val item = items[page]
+                            ItemCard(
+                                item = item,
+                                scale = if (page == currentIndex) scale else 1f,
+                                onPlayClick = { viewModel.togglePlaying() },
+                                isPlaying = if (page == currentIndex) isPlaying else false
+                            )
                         }
                     }
 
@@ -209,7 +242,7 @@ fun ItemImage(
     onPlayClick: () -> Unit
 ) {
     val context = LocalContext.current
-    val resourceId = context.resources.getIdentifier(item.imageRes, "drawable", context.packageName)
+    val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category)
     
     Box(
         modifier = Modifier
@@ -228,21 +261,16 @@ fun ItemImage(
                 .scale(scale),
             contentAlignment = Alignment.Center
         ) {
-            if (resourceId != 0) {
-                AsyncImage(
-                    model = ImageRequest.Builder(context)
-                        .data(resourceId)
-                        .crossfade(true)
-                        .build(),
-                    contentDescription = item.nameCN,
-                    modifier = Modifier.fillMaxSize()
-                )
-            } else {
-                Text(
-                    text = "🖼️",
-                    fontSize = 120.sp
-                )
-            }
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .data(imageSource)
+                    .crossfade(true)
+                    .placeholder(R.drawable.ic_placeholder_default)
+                    .error(R.drawable.ic_error_image)
+                    .build(),
+                contentDescription = item.nameCN,
+                modifier = Modifier.fillMaxSize()
+            )
         }
     }
 }
@@ -352,7 +380,7 @@ fun ItemCard(
     isPlaying: Boolean
 ) {
     val context = LocalContext.current
-    val resourceId = context.resources.getIdentifier(item.imageRes, "drawable", context.packageName)
+    val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category)
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -380,21 +408,16 @@ fun ItemCard(
                     .scale(scale),
                 contentAlignment = Alignment.Center
             ) {
-                if (resourceId != 0) {
-                    AsyncImage(
-                        model = ImageRequest.Builder(context)
-                            .data(resourceId)
-                            .crossfade(true)
-                            .build(),
-                        contentDescription = item.nameCN,
-                        modifier = Modifier.fillMaxSize()
-                    )
-                } else {
-                    Text(
-                        text = "🖼️",
-                        fontSize = 80.sp
-                    )
-                }
+                AsyncImage(
+                    model = ImageRequest.Builder(context)
+                        .data(imageSource)
+                        .crossfade(true)
+                        .placeholder(R.drawable.ic_placeholder_default)
+                        .error(R.drawable.ic_error_image)
+                        .build(),
+                    contentDescription = item.nameCN,
+                    modifier = Modifier.fillMaxSize()
+                )
             }
 
             Spacer(modifier = Modifier.height(24.dp))

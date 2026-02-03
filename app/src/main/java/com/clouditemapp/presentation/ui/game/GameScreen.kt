@@ -1,6 +1,8 @@
 package com.clouditemapp.presentation.ui.game
 
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -23,9 +25,15 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.clouditemapp.presentation.viewmodel.GameViewModel
+import com.clouditemapp.presentation.ui.common.ResourceUtils
+import androidx.compose.ui.platform.LocalContext
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 
 import com.airbnb.lottie.compose.*
 import com.clouditemapp.R
+
+import androidx.compose.ui.res.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,7 +43,6 @@ fun GameScreen(
 ) {
     val gameState by viewModel.gameState.collectAsState()
     val score by viewModel.score.collectAsState()
-    val correctCount by viewModel.correctCount.collectAsState()
     val totalQuestions by viewModel.totalQuestions.collectAsState()
     val currentIndex by viewModel.currentIndex.collectAsState()
     val currentItem by remember { derivedStateOf { viewModel.getCurrentItem() } }
@@ -52,7 +59,7 @@ fun GameScreen(
             TopAppBar(
                 title = {
                     Text(
-                        "🎮 趣味游戏",
+                        stringResource(R.string.game_title),
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -88,13 +95,19 @@ fun GameScreen(
         ) {
             when (gameState) {
                 is GameViewModel.GameState.Menu -> GameMenu(
-                    onStartGame = { viewModel.startGame() },
+                    onStartGuessGame = { viewModel.selectGameMode("guess") },
+                    onStartListenGame = { viewModel.selectGameMode("listen") },
                     onShowLeaderboard = { viewModel.showLeaderboard() }
+                )
+                is GameViewModel.GameState.LevelSelection -> LevelSelectionScreen(
+                    onLevelSelected = { category -> viewModel.startGame(category) },
+                    onBack = { viewModel.goToMenu() }
                 )
                 is GameViewModel.GameState.Playing -> GamePlay(
                     currentItem = currentItem,
                     currentIndex = currentIndex,
                     totalQuestions = totalQuestions,
+                    currentGameType = viewModel.currentGameType.collectAsState().value,
                     onAnswer = { isCorrect -> viewModel.answer(isCorrect) },
                     viewModel = viewModel
                 )
@@ -104,7 +117,7 @@ fun GameScreen(
                 )
                 is GameViewModel.GameState.Result -> GameResult(
                     result = gameState as GameViewModel.GameState.Result,
-                    onPlayAgain = { viewModel.startGame() },
+                    onPlayAgain = { viewModel.startGame(viewModel.selectedCategory.value) },
                     onBackToMenu = { viewModel.goToMenu() }
                 )
             }
@@ -113,19 +126,100 @@ fun GameScreen(
 }
 
 @Composable
-fun GameMenu(
-    onStartGame: () -> Unit,
-    onShowLeaderboard: () -> Unit
+fun LevelSelectionScreen(
+    onLevelSelected: (String) -> Unit,
+    onBack: () -> Unit
 ) {
+    val levels = listOf(
+        "动物世界", "美味水果", "新鲜蔬菜", "交通工具",
+        "日常用品", "自然现象", "食物与饮料", "身体部位", "全部随机"
+    )
+    
+    val scrollState = rememberScrollState()
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(24.dp),
+            .padding(24.dp)
+            .verticalScroll(scrollState),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "选择关卡",
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF0277BD)
+        )
+        
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        levels.forEach { level ->
+            LevelCard(
+                title = level,
+                onClick = { onLevelSelected(level) }
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+        
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        Button(
+            onClick = onBack,
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF90A4AE)),
+            shape = RoundedCornerShape(16.dp)
+        ) {
+            Text("返回模式选择", color = Color.White, fontWeight = FontWeight.Bold)
+        }
+    }
+}
+
+@Composable
+fun LevelCard(
+    title: String,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(80.dp)
+            .clickable { onClick() },
+        shape = RoundedCornerShape(24.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = if (title == "全部随机") Color(0xFFBA68C8) else Color.White
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    ) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = title,
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                color = if (title == "全部随机") Color.White else Color(0xFF0277BD)
+            )
+        }
+    }
+}
+
+@Composable
+fun GameMenu(
+    onStartGuessGame: () -> Unit,
+    onStartListenGame: () -> Unit,
+    onShowLeaderboard: () -> Unit
+) {
+    val scrollState = rememberScrollState()
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp)
+            .verticalScroll(scrollState),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "🎯 猜猜看游戏",
+            text = stringResource(R.string.game_menu),
             fontSize = 36.sp,
             fontWeight = FontWeight.Bold,
             color = Color(0xFF0277BD),
@@ -135,68 +229,102 @@ fun GameMenu(
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "根据物品特征，猜猜是什么",
+            text = stringResource(R.string.game_menu_desc),
             fontSize = 18.sp,
             color = Color(0xFF546E7A),
             textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(48.dp))
+        Spacer(modifier = Modifier.height(32.dp))
 
+        // 猜猜看模式
+        GameModeCard(
+            title = stringResource(R.string.game_mode_guess),
+            description = stringResource(R.string.game_mode_guess_desc),
+            color = Color(0xFF81C784),
+            onClick = onStartGuessGame
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // 听音识图模式
+        GameModeCard(
+            title = stringResource(R.string.game_mode_listen),
+            description = stringResource(R.string.game_mode_listen_desc),
+            color = Color(0xFF64B5F6),
+            onClick = onStartListenGame
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // 排行榜入口
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(150.dp)
-                .clickable { onStartGame() },
-            shape = RoundedCornerShape(32.dp),
+                .height(80.dp)
+                .clickable { onShowLeaderboard() },
+            shape = RoundedCornerShape(24.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color(0xFF81C784)
+                containerColor = Color(0xFFFFB74D)
             ),
             elevation = CardDefaults.cardElevation(
-                defaultElevation = 8.dp
+                defaultElevation = 4.dp
             )
         ) {
-            Column(
+            Box(
                 modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "🚀 开始游戏",
-                    fontSize = 28.sp,
+                    text = "🏆 排行榜",
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.White
                 )
             }
         }
+    }
+}
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Card(
+@Composable
+fun GameModeCard(
+    title: String,
+    description: String,
+    color: Color,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(120.dp)
+            .clickable { onClick() },
+        shape = RoundedCornerShape(32.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = color
+        ),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 8.dp
+        )
+    ) {
+        Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(100.dp)
-                .clickable { onShowLeaderboard() },
-            shape = RoundedCornerShape(32.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = Color(0xFFFFB74D)
-            ),
-            elevation = CardDefaults.cardElevation(
-                defaultElevation = 8.dp
-            )
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text(
-                    text = "🏆 排行榜",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White
-                )
-            }
+            Text(
+                text = title,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = description,
+                fontSize = 14.sp,
+                color = Color.White.copy(alpha = 0.9f)
+            )
         }
     }
 }
@@ -296,14 +424,16 @@ fun GamePlay(
     currentItem: com.clouditemapp.domain.model.Item?,
     currentIndex: Int,
     totalQuestions: Int,
+    currentGameType: String,
     onAnswer: (Boolean) -> Unit,
     viewModel: GameViewModel
 ) {
     val options by viewModel.options.collectAsState()
-    var selectedOption by remember(currentIndex) { mutableStateOf<String?>(null) }
+    var selectedOptionId by remember(currentIndex) { mutableStateOf<Long?>(null) }
+    val context = LocalContext.current
 
     val answerScale by animateFloatAsState(
-        targetValue = if (selectedOption != null) 1.05f else 1f,
+        targetValue = if (selectedOptionId != null) 1.05f else 1f,
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioMediumBouncy,
             stiffness = Spring.StiffnessLow
@@ -336,95 +466,133 @@ fun GamePlay(
             color = Color(0xFF0277BD)
         )
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
         currentItem?.let { item ->
             // 问题卡片
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f),
+                    .weight(0.4f),
                 shape = RoundedCornerShape(32.dp),
                 colors = CardDefaults.cardColors(
                     containerColor = Color.White
                 ),
                 elevation = CardDefaults.cardElevation(
-                    defaultElevation = 12.dp
+                    defaultElevation = 8.dp
                 )
             ) {
-                Column(
+                Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(24.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
+                        .padding(16.dp),
+                    contentAlignment = Alignment.Center
                 ) {
-                    Text(
-                        text = "这是什么？",
-                        fontSize = 28.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFF0277BD)
-                    )
-
-                    Spacer(modifier = Modifier.height(24.dp))
-
-                    // 提示
-                    Text(
-                        text = "提示: ${item.descriptionCN}",
-                        fontSize = 20.sp,
-                        color = Color(0xFF546E7A),
-                        textAlign = TextAlign.Center,
-                        lineHeight = 28.sp
-                    )
-
-                    Spacer(modifier = Modifier.height(32.dp))
-
-                    // 答案选项
-                    options.forEach { option ->
-                        val isCorrect = option == item.nameCN
-                        val isSelected = selectedOption == option
-
-                        val backgroundColor = when {
-                            selectedOption == null -> Color(0xFFE3F2FD)
-                            isSelected && isCorrect -> Color(0xFF81C784)
-                            isSelected && !isCorrect -> Color(0xFFEF5350)
-                            !isSelected && isCorrect -> Color(0xFF81C784).copy(alpha = 0.5f)
-                            else -> Color(0xFFE3F2FD)
-                        }
-
-                        val textColor = when {
-                            isSelected && isCorrect -> Color.White
-                            isSelected && !isCorrect -> Color.White
-                            else -> Color(0xFF0277BD)
-                        }
-
-                        Card(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(60.dp)
-                                .scale(if (isSelected) answerScale else 1f)
-                                .clickable(enabled = selectedOption == null) {
-                                    selectedOption = option
-                                    onAnswer(isCorrect)
-                                },
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = backgroundColor
+                    if (currentGameType == "guess") {
+                        // 提示文字 (较大)
+                        Text(
+                            text = item.descriptionCN,
+                            fontSize = 24.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFF546E7A),
+                            textAlign = TextAlign.Center,
+                            lineHeight = 32.sp
+                        )
+                    } else {
+                        // 播放按钮 (很大，适合幼儿)
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text(
+                                text = "点我听声音",
+                                fontSize = 16.sp,
+                                color = Color(0xFF0277BD),
+                                modifier = Modifier.padding(bottom = 8.dp)
                             )
-                        ) {
                             Box(
-                                modifier = Modifier.fillMaxSize(),
+                                modifier = Modifier
+                                    .size(100.dp)
+                                    .clip(CircleShape)
+                                    .background(Color(0xFFE3F2FD))
+                                    .clickable { viewModel.playCurrentItemAudio() },
                                 contentAlignment = Alignment.Center
                             ) {
-                                Text(
-                                    text = option,
-                                    fontSize = 22.sp,
-                                    fontWeight = FontWeight.Medium,
-                                    color = textColor
+                                Icon(
+                                    Icons.Default.VolumeUp,
+                                    contentDescription = "播放声音",
+                                    modifier = Modifier.size(64.dp),
+                                    tint = Color(0xFF0277BD)
                                 )
                             }
                         }
+                    }
+                }
+            }
 
-                        Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // 答案选项 (九宫格形式，显示图片)
+            androidx.compose.foundation.lazy.grid.LazyVerticalGrid(
+                columns = androidx.compose.foundation.lazy.grid.GridCells.Fixed(2),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(0.6f),
+                contentPadding = PaddingValues(4.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                items(options.size) { index ->
+                    val option = options[index]
+                    val isCorrect = option.id == item.id
+                    val isSelected = selectedOptionId == option.id
+                    val imageSource = ResourceUtils.getItemImageRes(context, option.imageRes, option.category)
+
+                    val backgroundColor = when {
+                        selectedOptionId == null -> Color.White
+                        isSelected && isCorrect -> Color(0xFF81C784)
+                        isSelected && !isCorrect -> Color(0xFFEF5350)
+                        !isSelected && isCorrect -> Color(0xFF81C784).copy(alpha = 0.5f)
+                        else -> Color.White
+                    }
+
+                    Card(
+                        modifier = Modifier
+                            .aspectRatio(1f)
+                            .scale(if (isSelected) answerScale else 1f)
+                            .clickable(enabled = selectedOptionId == null) {
+                                selectedOptionId = option.id
+                                onAnswer(isCorrect)
+                            },
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(
+                            containerColor = backgroundColor
+                        ),
+                        elevation = CardDefaults.cardElevation(
+                            defaultElevation = 4.dp
+                        )
+                    ) {
+                        Column(
+                            modifier = Modifier.fillMaxSize(),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            AsyncImage(
+                                model = ImageRequest.Builder(context)
+                                    .data(imageSource)
+                                    .crossfade(true)
+                                    .build(),
+                                contentDescription = option.nameCN,
+                                modifier = Modifier
+                                    .size(100.dp)
+                                    .padding(8.dp)
+                            )
+                            if (selectedOptionId != null) {
+                                Text(
+                                    text = option.nameCN,
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (isSelected) Color.White else Color(0xFF0277BD)
+                                )
+                            }
+                        }
                     }
                 }
             }

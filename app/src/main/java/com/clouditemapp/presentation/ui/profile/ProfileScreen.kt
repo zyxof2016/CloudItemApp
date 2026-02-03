@@ -17,13 +17,25 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.clouditemapp.domain.model.Achievement
+import com.clouditemapp.presentation.viewmodel.ProfileViewModel
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
-    navController: NavController
+    navController: NavController,
+    viewModel: ProfileViewModel = hiltViewModel()
 ) {
+    val stats by viewModel.stats.collectAsState()
+    val achievements by viewModel.achievements.collectAsState()
+    
+    // 简单的等级计算：每 100 颗星升一级
+    val level = (stats.totalStars / 100) + 1
+    
     val skyGradient = Brush.verticalGradient(
         colors = listOf(
             Color(0xFFE0F7FA),
@@ -93,7 +105,7 @@ fun ProfileScreen(
                     )
                 ) {
                     Text(
-                        text = "🌟 Level 5",
+                        text = "🌟 Level $level",
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
@@ -112,19 +124,19 @@ fun ProfileScreen(
                         modifier = Modifier.weight(1f),
                         icon = "📚",
                         label = "已学习",
-                        value = "45"
+                        value = "${stats.learnedCount}"
                     )
                     StatCard(
                         modifier = Modifier.weight(1f),
                         icon = "🎮",
                         label = "游戏次数",
-                        value = "12"
+                        value = "${stats.gameCount}"
                     )
                     StatCard(
                         modifier = Modifier.weight(1f),
                         icon = "⭐",
                         label = "星星",
-                        value = "128"
+                        value = "${stats.totalStars}"
                     )
                 }
 
@@ -132,7 +144,7 @@ fun ProfileScreen(
 
                 // 成就展示
                 Text(
-                    text = "我的成就",
+                    text = "我的成就 (${stats.unlockedAchievementsCount}/${stats.totalAchievementsCount})",
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF0277BD),
@@ -142,7 +154,7 @@ fun ProfileScreen(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 // 成就列表
-                AchievementGrid()
+                AchievementGrid(achievements)
             }
         }
     }
@@ -197,29 +209,32 @@ fun StatCard(
 }
 
 @Composable
-fun AchievementGrid() {
-    val achievements = listOf(
-        AchievementItem("初次探索", "完成第一次学习", "🎯", true),
-        AchievementItem("学习达人", "学习10个物品", "📚", true),
-        AchievementItem("游戏高手", "完成5次游戏", "🎮", true),
-        AchievementItem("连续学习", "连续学习3天", "🔥", false),
-        AchievementItem("全知全能", "学习所有分类", "🌟", false),
-        AchievementItem("完美答案", "连续答对10题", "💯", false)
-    )
-
-    Column(
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        achievements.chunked(2).forEach { row ->
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                row.forEach { achievement ->
-                    AchievementCard(
-                        modifier = Modifier.weight(1f),
-                        achievement = achievement
-                    )
+fun AchievementGrid(achievements: List<Achievement>) {
+    if (achievements.isEmpty()) {
+        Box(modifier = Modifier.fillMaxWidth().height(100.dp), contentAlignment = Alignment.Center) {
+            Text(text = "加油，开始你的探索之旅吧！", color = Color.Gray)
+        }
+    } else {
+        androidx.compose.foundation.lazy.LazyColumn(
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            val rows = achievements.chunked(2)
+            items(rows.size) { rowIndex ->
+                val row = rows[rowIndex]
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    row.forEach { achievement ->
+                        AchievementCard(
+                            modifier = Modifier.weight(1f),
+                            achievement = achievement
+                        )
+                    }
+                    if (row.size == 1) {
+                        Spacer(modifier = Modifier.weight(1f))
+                    }
                 }
             }
         }
@@ -229,13 +244,13 @@ fun AchievementGrid() {
 @Composable
 fun AchievementCard(
     modifier: Modifier = Modifier,
-    achievement: AchievementItem
+    achievement: Achievement
 ) {
     Card(
         modifier = modifier.height(100.dp),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (achievement.unlocked) Color.White else Color(0xFFCFD8DC)
+            containerColor = if (achievement.unlocked) Color.White else Color(0xFFF5F5F5)
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = if (achievement.unlocked) 4.dp else 0.dp
@@ -249,9 +264,9 @@ fun AchievementCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = achievement.icon,
-                fontSize = 36.sp,
-                modifier = Modifier.scale(if (achievement.unlocked) 1f else 0.8f)
+                text = achievement.iconRes,
+                fontSize = 32.sp,
+                modifier = Modifier.scale(if (achievement.unlocked) 1f else 0.7f)
             )
 
             Column(
@@ -268,29 +283,16 @@ fun AchievementCard(
 
                 Text(
                     text = achievement.description,
-                    fontSize = 12.sp,
-                    color = if (achievement.unlocked) Color(0xFF546E7A) else Color(0xFF90A4AE)
+                    fontSize = 10.sp,
+                    lineHeight = 14.sp,
+                    color = if (achievement.unlocked) Color(0xFF546E7A) else Color(0xFFB0BEC5)
                 )
             }
 
-            if (achievement.unlocked) {
-                Text(
-                    text = "✅",
-                    fontSize = 20.sp
-                )
-            } else {
-                Text(
-                    text = "🔒",
-                    fontSize = 20.sp
-                )
-            }
+            Text(
+                text = if (achievement.unlocked) "✅" else "🔒",
+                fontSize = 16.sp
+            )
         }
     }
 }
-
-data class AchievementItem(
-    val name: String,
-    val description: String,
-    val icon: String,
-    val unlocked: Boolean
-)

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 可爱的 3D 风格云朵 -->
+    <!-- 底部阴影，增加 3D 感 -->
+    <path
+        android:fillColor="#1A000000"
+        android:pathData="M30,65 Q54,85 78,65 Q85,65 85,58 Q85,45 75,45 Q75,35 60,35 Q50,25 40,35 Q30,35 30,45 Q20,45 20,58 Q20,65 30,65 Z" />
+
+    <!-- 云朵主体 (纯白) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,62 Q54,82 78,62 Q85,62 85,55 Q85,42 75,42 Q75,32 60,32 Q50,22 40,32 Q30,32 30,42 Q20,42 20,55 Q20,62 30,62 Z" />
+
+    <!-- 可爱的眼睛 (左) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M42,48 A2,2 0 1 1 42,52 A2,2 0 1 1 42,48" />
+    <!-- 眼睛高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42.5,49 A0.5,0.5 0 1 1 42.5,50 A0.5,0.5 0 1 1 42.5,49" />
+
+    <!-- 可爱的眼睛 (右) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M66,48 A2,2 0 1 1 66,52 A2,2 0 1 1 66,48" />
+    <!-- 眼睛高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M66.5,49 A0.5,0.5 0 1 1 66.5,50 A0.5,0.5 0 1 1 66.5,49" />
+
+    <!-- 小嘴巴 -->
+    <path
+        android:fillColor="#FF5252"
+        android:pathData="M50,55 Q54,58 58,55 L58,56 Q54,59 50,56 Z" />
+
+    <!-- 腮红 (左) -->
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M35,53 A3,2 0 1 0 35,57 A3,2 0 1 0 35,53" />
+    <!-- 腮红 (右) -->
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M73,53 A3,2 0 1 0 73,57 A3,2 0 1 0 73,53" />
+
+    <!-- 小皇冠 (炫酷装饰) -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M48,30 L51,25 L54,30 L57,25 L60,30 L60,33 L48,33 Z" />
+    
+    <!-- 亮晶晶的星星 1 -->
+    <path
+        android:fillColor="#FFF176"
+        android:pathData="M80,25 L82,28 L85,28 L83,30 L84,33 L81,31 L78,33 L79,30 L77,28 L80,28 Z" />
+    
+    <!-- 亮晶晶的星星 2 -->
+    <path
+        android:fillColor="#FFF176"
+        android:pathData="M25,20 L27,23 L30,23 L28,25 L29,28 L26,26 L23,28 L24,25 L22,23 L25,23 Z" />
+
+</vector>

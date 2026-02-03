@@ -66,15 +66,25 @@ class EyeProtectionManager @Inject constructor() {
         _isLockVisible.value = true
     }
 
-    private fun hideLock() {
+    fun hideLock() {
         _isLockVisible.value = false
+    }
+
+    fun dismissLock() {
+        hideLock()
+        sessionStartTime = System.currentTimeMillis()
     }
 }
 
 @Composable
 fun EyeProtectionDialog(
-    isVisible: Boolean
+    isVisible: Boolean,
+    onDismiss: () -> Unit
 ) {
+    var showParentGate by remember { mutableStateOf(false) }
+    var mathProblem by remember { mutableStateOf(Pair(0, 0)) }
+    var userAnswer by remember { mutableStateOf("") }
+
     if (isVisible) {
         Dialog(
             onDismissRequest = { },
@@ -90,36 +100,128 @@ fun EyeProtectionDialog(
                     .background(Color(0xFFB3E5FC)),
                 contentAlignment = Alignment.Center
             ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center,
-                    modifier = Modifier.padding(24.dp)
-                ) {
-                    val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.loading))
-                    LottieAnimation(
-                        composition = composition,
-                        iterations = LottieConstants.IterateForever,
-                        modifier = Modifier.size(250.dp)
-                    )
+                if (!showParentGate) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.padding(24.dp)
+                    ) {
+                        val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.loading))
+                        LottieAnimation(
+                            composition = composition,
+                            iterations = LottieConstants.IterateForever,
+                            modifier = Modifier.size(250.dp)
+                        )
 
-                    Spacer(modifier = Modifier.height(32.dp))
+                        Spacer(modifier = Modifier.height(32.dp))
 
-                    Text(
-                        text = "眼睛休息时间",
-                        fontSize = 32.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFF0277BD)
-                    )
+                        Text(
+                            text = "眼睛休息时间",
+                            fontSize = 32.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFF0277BD)
+                        )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(modifier = Modifier.height(16.dp))
 
-                    Text(
-                        text = "云朵也累了，陪眼睛休息2分钟吧！\n远眺一下窗外，或者眨眨眼吧~",
-                        fontSize = 18.sp,
-                        textAlign = TextAlign.Center,
-                        color = Color(0xFF546E7A),
-                        lineHeight = 28.sp
-                    )
+                        Text(
+                            text = "云朵也累了，陪眼睛休息2分钟吧！\n远眺一下窗外，或者眨眨眼吧~",
+                            fontSize = 18.sp,
+                            textAlign = TextAlign.Center,
+                            color = Color(0xFF546E7A),
+                            lineHeight = 28.sp
+                        )
+
+                        Spacer(modifier = Modifier.height(48.dp))
+
+                        // 家长退出按钮
+                        TextButton(
+                            onClick = {
+                                mathProblem = Pair((5..15).random(), (5..15).random())
+                                showParentGate = true
+                            }
+                        ) {
+                            Text("家长退出", color = Color(0xFF0277BD).copy(alpha = 0.6f))
+                        }
+                    }
+                } else {
+                    // 家长验证界面
+                    Card(
+                        modifier = Modifier
+                            .padding(24.dp)
+                            .fillMaxWidth(),
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(24.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(
+                                text = "家长验证",
+                                fontSize = 24.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF0277BD)
+                            )
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Text(
+                                text = "请输入计算结果以确认您是家长：",
+                                fontSize = 16.sp,
+                                color = Color(0xFF546E7A)
+                            )
+                            Spacer(modifier = Modifier.height(24.dp))
+                            Text(
+                                text = "${mathProblem.first} + ${mathProblem.second} = ?",
+                                fontSize = 32.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF0277BD)
+                            )
+                            Spacer(modifier = Modifier.height(24.dp))
+                            OutlinedTextField(
+                                value = userAnswer,
+                                onValueChange = { if (it.length <= 3) userAnswer = it },
+                                keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
+                                    keyboardType = androidx.compose.ui.text.input.KeyboardType.Number
+                                ),
+                                modifier = Modifier.width(120.dp),
+                                singleLine = true,
+                                textStyle = androidx.compose.ui.text.TextStyle(
+                                    fontSize = 24.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
+                            Spacer(modifier = Modifier.height(32.dp))
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                            ) {
+                                OutlinedButton(
+                                    onClick = { 
+                                        showParentGate = false
+                                        userAnswer = ""
+                                    },
+                                    modifier = Modifier.weight(1f),
+                                    shape = RoundedCornerShape(12.dp)
+                                ) {
+                                    Text("返回")
+                                }
+                                Button(
+                                    onClick = {
+                                        if (userAnswer.toIntOrNull() == mathProblem.first + mathProblem.second) {
+                                            onDismiss()
+                                            showParentGate = false
+                                            userAnswer = ""
+                                        }
+                                    },
+                                    modifier = Modifier.weight(1f),
+                                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0277BD)),
+                                    shape = RoundedCornerShape(12.dp)
+                                ) {
+                                    Text("确认退出")
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

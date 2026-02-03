@@ -48,7 +48,10 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     CloudItemNavHost(navController = navController)
 
-                    EyeProtectionDialog(isVisible = isEyeProtectionVisible)
+                    EyeProtectionDialog(
+                        isVisible = isEyeProtectionVisible,
+                        onDismiss = { eyeProtectionManager.dismissLock() }
+                    )
                 }
             }
         }
