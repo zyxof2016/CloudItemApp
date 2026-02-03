@@ -76,15 +76,31 @@ private fun Achievement.toEntity(): AchievementEntity {
 }
 
 private fun parseJsonMap(json: String): Map<String, Any> {
-    // 简单的JSON解析，实际项目中应该使用Gson或Moshi
-    return try {
-        emptyMap()
+    val map = mutableMapOf<String, Any>()
+    try {
+        if (json.startsWith("{") && json.endsWith("}")) {
+            val content = json.substring(1, json.length - 1)
+            val pairs = content.split(",")
+            pairs.forEach { pair ->
+                val parts = pair.split(":")
+                if (parts.size == 2) {
+                    val key = parts[0].trim().replace("\"", "")
+                    val valueStr = parts[1].trim().replace("\"", "")
+                    val value: Any = valueStr.toIntOrNull() ?: valueStr
+                    map[key] = value
+                }
+            }
+        }
     } catch (e: Exception) {
-        emptyMap()
+        e.printStackTrace()
     }
+    return map
 }
 
 private fun mapToJson(map: Map<String, Any>): String {
-    // 简单的JSON序列化，实际项目中应该使用Gson或Moshi
-    return "{}"
+    val entries = map.entries.joinToString(",") { (k, v) -> 
+        val valueStr = if (v is String) "\"$v\"" else v.toString()
+        "\"$k\":$valueStr" 
+    }
+    return "{$entries}"
 }

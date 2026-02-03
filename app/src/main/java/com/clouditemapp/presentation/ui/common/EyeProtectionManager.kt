@@ -17,14 +17,19 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.airbnb.lottie.compose.*
 import com.clouditemapp.R
+import com.clouditemapp.data.local.PreferencesManager
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class EyeProtectionManager @Inject constructor() {
+class EyeProtectionManager @Inject constructor(
+    private val preferencesManager: PreferencesManager
+) {
     private val _isLockVisible = MutableStateFlow(false)
     val isLockVisible: StateFlow<Boolean> = _isLockVisible
 
@@ -45,20 +50,30 @@ class EyeProtectionManager @Inject constructor() {
         }
     }
 
-    suspend fun startMonitoring() {
-        while (true) {
-            if (_isEnabled.value) {
-                val currentTime = System.currentTimeMillis()
-                if (currentTime - sessionStartTime > MAX_SESSION_TIME) {
-                    showLock()
-                    delay(REST_TIME)
-                    hideLock()
+    suspend fun startMonitoring() = coroutineScope {
+        // 1. 监听持久化设置的变化
+        launch {
+            preferencesManager.isEyeProtectionEnabled.collect { enabled ->
+                setEnabled(enabled)
+            }
+        }
+        
+        // 2. 监控循环
+        launch {
+            while (true) {
+                if (_isEnabled.value) {
+                    val currentTime = System.currentTimeMillis()
+                    if (currentTime - sessionStartTime > MAX_SESSION_TIME) {
+                        showLock()
+                        delay(REST_TIME)
+                        hideLock()
+                        sessionStartTime = System.currentTimeMillis()
+                    }
+                } else {
                     sessionStartTime = System.currentTimeMillis()
                 }
-            } else {
-                sessionStartTime = System.currentTimeMillis()
+                delay(10000) // 每10秒检查一次
             }
-            delay(10000) // 每10秒检查一次
         }
     }
 

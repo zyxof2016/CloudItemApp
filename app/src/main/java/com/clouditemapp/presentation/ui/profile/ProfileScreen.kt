@@ -1,6 +1,7 @@
 package com.clouditemapp.presentation.ui.profile
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -23,8 +24,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.clouditemapp.domain.model.Achievement
 import com.clouditemapp.presentation.viewmodel.ProfileViewModel
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -140,30 +139,6 @@ fun ProfileScreen(
                         label = "星星",
                         value = "${stats.totalStars}"
                     )
-                } else {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(12.dp)
-                    ) {
-                        StatCard(
-                            modifier = Modifier.weight(1f),
-                            icon = "📚",
-                            label = "已学习",
-                            value = "${profileState.learnedCount}"
-                        )
-                        StatCard(
-                            modifier = Modifier.weight(1f),
-                            icon = "🎮",
-                            label = "游戏次数",
-                            value = "${profileState.gameCount}"
-                        )
-                        StatCard(
-                            modifier = Modifier.weight(1f),
-                            icon = "⭐",
-                            label = "星星",
-                            value = "${profileState.stars}"
-                        )
-                    }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))

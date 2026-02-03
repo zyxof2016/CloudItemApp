@@ -60,13 +60,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CloudItemAppTheme(content: @Composable () -> Unit) {
-    val skyGradient = Brush.verticalGradient(
-        colors = listOf(
-            Color(0xFFE0F7FA),
-            Color(0xFFB3E5FC)
-        )
-    )
-
     MaterialTheme(
         colorScheme = MaterialTheme.colorScheme.copy(
             primary = Color(0xFF0277BD),

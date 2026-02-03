@@ -12,37 +12,87 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
-
+import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
+import com.clouditemapp.BuildConfig
+import com.clouditemapp.data.local.PreferencesManager
 import com.clouditemapp.presentation.ui.common.AudioManager
 import com.clouditemapp.presentation.ui.common.EyeProtectionManager
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
+    private val preferencesManager: PreferencesManager,
     private val eyeProtectionManager: EyeProtectionManager,
     private val audioManager: AudioManager
 ) : ViewModel() {
-    val isEyeProtectionEnabled: StateFlow<Boolean> = eyeProtectionManager.isEnabled
-
-    private val _isSoundEnabled = MutableStateFlow(true)
-    val isSoundEnabled: StateFlow<Boolean> = _isSoundEnabled.asStateFlow()
-
-    fun toggleEyeProtection(enabled: Boolean) {
-        eyeProtectionManager.setEnabled(enabled)
-    }
+    
+    val isSoundEnabled: StateFlow<Boolean> = preferencesManager.isSoundEnabled
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), true)
+        
+    val isMusicEnabled: StateFlow<Boolean> = preferencesManager.isMusicEnabled
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), true)
+        
+    val language: StateFlow<String> = preferencesManager.language
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "中文")
+        
+    val fontScale: StateFlow<Float> = preferencesManager.fontScale
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 1.0f)
+        
+    val isEyeProtectionEnabled: StateFlow<Boolean> = preferencesManager.isEyeProtectionEnabled
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), true)
 
     fun toggleSound(enabled: Boolean) {
-        _isSoundEnabled.value = enabled
-        audioManager.setSoundEnabled(enabled)
+        viewModelScope.launch {
+            preferencesManager.setSoundEnabled(enabled)
+            audioManager.setSoundEnabled(enabled)
+        }
+    }
+
+    fun toggleMusic(enabled: Boolean) {
+        viewModelScope.launch {
+            preferencesManager.setMusicEnabled(enabled)
+            // TODO: Implement background music control in AudioManager
+        }
+    }
+
+    fun setLanguage(newLanguage: String) {
+        viewModelScope.launch {
+            preferencesManager.setLanguage(newLanguage)
+        }
+    }
+
+    fun setFontScale(scale: Float) {
+        viewModelScope.launch {
+            preferencesManager.setFontScale(scale)
+        }
+    }
+
+    fun toggleEyeProtection(enabled: Boolean) {
+        viewModelScope.launch {
+            preferencesManager.setEyeProtectionEnabled(enabled)
+            eyeProtectionManager.setEnabled(enabled)
+        }
+    }
+
+    fun resetAllSettings() {
+        viewModelScope.launch {
+            preferencesManager.resetAll()
+            // Reset managers to default states
+            audioManager.setSoundEnabled(true)
+            eyeProtectionManager.setEnabled(true)
+        }
     }
 }
 
@@ -53,9 +103,14 @@ fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
     val soundEnabled by viewModel.isSoundEnabled.collectAsState()
-    var musicEnabled by remember { mutableStateOf(true) }
-    var language by remember { mutableStateOf("中文") }
+    val musicEnabled by viewModel.isMusicEnabled.collectAsState()
+    val language by viewModel.language.collectAsState()
+    val fontScale by viewModel.fontScale.collectAsState()
     val isEyeProtectionEnabled by viewModel.isEyeProtectionEnabled.collectAsState()
+
+    var showResetConfirm by remember { mutableStateOf(false) }
+    var mathProblem by remember { mutableStateOf(Pair(0, 0)) }
+    var userAnswer by remember { mutableStateOf("") }
 
     val skyGradient = Brush.verticalGradient(
         colors = listOf(
@@ -105,7 +160,7 @@ fun SettingsScreen(
                         title = "背景音乐",
                         description = "开启/关闭背景音乐",
                         checked = musicEnabled,
-                        onCheckedChange = { musicEnabled = it }
+                        onCheckedChange = { viewModel.toggleMusic(it) }
                     )
                 }
 
@@ -116,7 +171,7 @@ fun SettingsScreen(
                         description = "选择应用语言",
                         value = language,
                         options = listOf("中文", "English", "双语"),
-                        onValueChange = { language = it }
+                        onValueChange = { viewModel.setLanguage(it) }
                     )
                 }
 
@@ -125,8 +180,8 @@ fun SettingsScreen(
                     SliderItem(
                         title = "字体大小",
                         description = "调整应用字体大小",
-                        value = 0.5f,
-                        onValueChange = { }
+                        value = fontScale,
+                        onValueChange = { viewModel.setFontScale(it) }
                     )
 
                     SwitchItem(
@@ -141,7 +196,7 @@ fun SettingsScreen(
                 SettingsSection(title = "关于") {
                     AboutItem(
                         title = "版本",
-                        value = "1.0.0"
+                        value = "${BuildConfig.VERSION_NAME} (1.0.1-stable)"
                     )
 
                     AboutItem(
@@ -154,7 +209,10 @@ fun SettingsScreen(
 
                 // 重置按钮
                 Button(
-                    onClick = { },
+                    onClick = { 
+                        mathProblem = Pair((5..15).random(), (5..15).random())
+                        showResetConfirm = true 
+                    },
                     modifier = Modifier.fillMaxWidth(),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFFEF5350)
@@ -167,6 +225,88 @@ fun SettingsScreen(
                         fontWeight = FontWeight.Bold,
                         color = Color.White
                     )
+                }
+            }
+        }
+    }
+
+    if (showResetConfirm) {
+        Dialog(onDismissRequest = { showResetConfirm = false }) {
+            Card(
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth(),
+                shape = RoundedCornerShape(24.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ) {
+                Column(
+                    modifier = Modifier.padding(24.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "家长验证",
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF0277BD)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "重置设置是敏感操作，请输入结果：",
+                        fontSize = 16.sp,
+                        textAlign = TextAlign.Center,
+                        color = Color(0xFF546E7A)
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
+                    Text(
+                        text = "${mathProblem.first} + ${mathProblem.second} = ?",
+                        fontSize = 32.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF0277BD)
+                    )
+                    Spacer(modifier = Modifier.height(24.dp))
+                    OutlinedTextField(
+                        value = userAnswer,
+                        onValueChange = { if (it.length <= 3) userAnswer = it },
+                        keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
+                            keyboardType = androidx.compose.ui.text.input.KeyboardType.Number
+                        ),
+                        modifier = Modifier.width(120.dp),
+                        singleLine = true,
+                        textStyle = androidx.compose.ui.text.TextStyle(
+                            fontSize = 24.sp,
+                            textAlign = TextAlign.Center
+                        )
+                    )
+                    Spacer(modifier = Modifier.height(32.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        OutlinedButton(
+                            onClick = { 
+                                showResetConfirm = false
+                                userAnswer = ""
+                            },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text("取消")
+                        }
+                        Button(
+                            onClick = {
+                                if (userAnswer.toIntOrNull() == mathProblem.first + mathProblem.second) {
+                                    viewModel.resetAllSettings()
+                                    showResetConfirm = false
+                                    userAnswer = ""
+                                }
+                            },
+                            modifier = Modifier.weight(1f),
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEF5350)),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text("确认重置")
+                        }
+                    }
                 }
             }
         }
