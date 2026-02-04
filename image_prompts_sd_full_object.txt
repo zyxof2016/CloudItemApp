@@ -1,0 +1,1894 @@
+================================================================================
+云朵识物乐园 - SD 专用图片提示词（物品全貌、画面干净）
+================================================================================
+
+【使用步骤】
+1. 在 Stable Diffusion 中，Positive 复制下方「正面提示词」
+2. Negative 复制「负向提示词」整段（或使用 PROMPTS_SD_FULL_OBJECT.md 中的负向）
+3. 尺寸建议 1:1（如 512x512 或 1024x1024）
+4. 生成后保存为「文件名」并放入 app/src/main/res/drawable/
+
+【负向提示词】整段复制到 SD Negative prompt：
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+================================================================================
+
+------------------------------------------------------------
+【1】猫 (Cat)
+文件名: cat.png
+正面提示词:
+A cute fluffy ginger cat with big bright eyes, full body sitting from head to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【2】狗 (Dog)
+文件名: dog.png
+正面提示词:
+A happy golden retriever puppy with friendly smile, full body sitting from head to paws, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【3】兔子 (Rabbit)
+文件名: rabbit.png
+正面提示词:
+A soft white chubby bunny with a carrot, full body standing from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【4】小鸟 (Bird)
+文件名: bird.png
+正面提示词:
+A round adorable blue bird, full body with wings and tail visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【5】大象 (Elephant)
+文件名: elephant.png
+正面提示词:
+A friendly baby elephant with large ears, full body standing from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【6】老虎 (Tiger)
+文件名: tiger.png
+正面提示词:
+A cute tiny tiger cub with soft fur, full body sitting from head to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【7】狮子 (Lion)
+文件名: lion.png
+正面提示词:
+A cute baby lion with a fluffy mane, full body sitting from head to paws, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【8】长颈鹿 (Giraffe)
+文件名: giraffe.png
+正面提示词:
+A tall friendly giraffe with brown spots, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【9】斑马 (Zebra)
+文件名: zebra.png
+正面提示词:
+A sweet baby zebra with black stripes, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【10】猴子 (Monkey)
+文件名: monkey.png
+正面提示词:
+A playful little monkey hanging by tail, full body visible from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【11】熊猫 (Panda)
+文件名: panda.png
+正面提示词:
+A chubby black and white panda with bamboo, full body sitting from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【12】考拉 (Koala)
+文件名: koala.png
+正面提示词:
+A grey fuzzy koala hugging a branch, full body visible from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【13】企鹅 (Penguin)
+文件名: penguin.png
+正面提示词:
+A tiny round penguin with yellow beak, full body standing from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【14】猪 (Pig)
+文件名: pig.png
+正面提示词:
+A round pink piglet with a curly tail, full body standing from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【15】牛 (Cow)
+文件名: cow.png
+正面提示词:
+A friendly black and white spotted cow, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【16】羊 (Sheep)
+文件名: sheep.png
+正面提示词:
+A white fluffy sheep with soft wool, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【17】马 (Horse)
+文件名: horse.png
+正面提示词:
+A friendly small brown horse, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【18】鸡 (Chicken)
+文件名: chicken.png
+正面提示词:
+A round yellow mother hen, full body standing from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【19】鸭 (Duck)
+文件名: duck.png
+正面提示词:
+A bright yellow duckling with orange beak, full body standing from head to webbed feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【20】熊 (Bear)
+文件名: bear.png
+正面提示词:
+A soft brown bear with a round face, full body sitting from head to paws, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【21】狐狸 (Fox)
+文件名: fox.png
+正面提示词:
+A cute orange fox with a bushy tail, full body sitting from head to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【22】鹿 (Deer)
+文件名: deer.png
+正面提示词:
+A small brown deer with white spots, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【23】刺猬 (Hedgehog)
+文件名: hedgehog.png
+正面提示词:
+A tiny round hedgehog with soft prickles, full body visible from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【24】松鼠 (Squirrel)
+文件名: squirrel.png
+正面提示词:
+A bushy-tailed squirrel holding a nut, full body visible from head to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【25】骆驼 (Camel)
+文件名: camel.png
+正面提示词:
+A friendly camel with two humps, full body standing from head to hooves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【26】蛇 (Snake)
+文件名: snake.png
+正面提示词:
+An adorable cute green coiled snake with big round eyes, complete body in coil from head to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【27】鳄鱼 (Crocodile)
+文件名: crocodile.png
+正面提示词:
+An adorable small green crocodile with a big friendly smile, full body visible from snout to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【28】乌龟 (Turtle)
+文件名: turtle.png
+正面提示词:
+A slow green turtle with a patterned shell, full body visible from head to feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【29】青蛙 (Frog)
+文件名: frog.png
+正面提示词:
+A happy green frog on a lily pad, full body visible from head to webbed feet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【30】蝴蝶 (Butterfly)
+文件名: butterfly.png
+正面提示词:
+A colorful butterfly with patterned wings, complete butterfly with both wings fully visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【31】蜜蜂 (Bee)
+文件名: bee.png
+正面提示词:
+A fuzzy yellow and black honey bee, complete bee with wings and legs visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【32】瓢虫 (Ladybug)
+文件名: ladybug.png
+正面提示词:
+A small red ladybug with black spots, complete ladybug with wings and legs visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【33】螃蟹 (Crab)
+文件名: crab.png
+正面提示词:
+A red crab with two big claws, full body visible with all legs and claws, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【34】龙虾 (Lobster)
+文件名: lobster.png
+正面提示词:
+A long red lobster with big feelers, complete lobster from antennae to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【35】章鱼 (Octopus)
+文件名: octopus.png
+正面提示词:
+A purple octopus with eight wiggly arms, full body visible with all eight arms, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【36】鲸鱼 (Whale)
+文件名: whale.png
+正面提示词:
+A big blue whale spouting water, full body visible from head to tail fluke, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【37】海豚 (Dolphin)
+文件名: dolphin.png
+正面提示词:
+A sleek grey dolphin jumping from water, full body visible from snout to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【38】鲨鱼 (Shark)
+文件名: shark.png
+正面提示词:
+An adorable small grey shark with a big friendly grin, full body visible from snout to tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【39】海马 (Seahorse)
+文件名: seahorse.png
+正面提示词:
+A tiny colorful seahorse in water, complete seahorse from head to curled tail, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【40】水母 (Jellyfish)
+文件名: jellyfish.png
+正面提示词:
+A glowing pink translucent jellyfish, full body visible with bell and tentacles, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【41】苹果 (Apple)
+文件名: apple.png
+正面提示词:
+A complete shiny red round apple with a leaf, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【42】香蕉 (Banana)
+文件名: banana.png
+正面提示词:
+A complete bunch of bright yellow bananas, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【43】橙子 (Orange)
+文件名: orange.png
+正面提示词:
+A complete perfectly round orange fruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【44】葡萄 (Grape)
+文件名: grape.png
+正面提示词:
+A complete bunch of purple round grapes, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【45】西瓜 (Watermelon)
+文件名: watermelon.png
+正面提示词:
+A complete large round green striped watermelon, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【46】草莓 (Strawberry)
+文件名: strawberry.png
+正面提示词:
+A complete bright red strawberry with tiny seeds, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【47】菠萝 (Pineapple)
+文件名: pineapple.png
+正面提示词:
+A complete golden pineapple with a green crown, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【48】芒果 (Mango)
+文件名: mango.png
+正面提示词:
+A complete smooth yellow and red mango, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【49】梨 (Pear)
+文件名: pear.png
+正面提示词:
+A complete soft green pear with a narrow top, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【50】桃子 (Peach)
+文件名: peach.png
+正面提示词:
+A complete fuzzy pink and orange peach, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【51】樱桃 (Cherry)
+文件名: cherry.png
+正面提示词:
+A complete pair of bright red cherries with stem, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【52】蓝莓 (Blueberry)
+文件名: blueberry.png
+正面提示词:
+A complete cluster of small round dark blue berries, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【53】猕猴桃 (Kiwi)
+文件名: kiwi.png
+正面提示词:
+A complete fuzzy brown kiwi fruit sliced open, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【54】柠檬 (Lemon)
+文件名: lemon.png
+正面提示词:
+A complete bright yellow sour lemon, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【55】火龙果 (Dragonfruit)
+文件名: dragonfruit.png
+正面提示词:
+A complete pink dragonfruit with green scales, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【56】哈密瓜 (Melon)
+文件名: melon.png
+正面提示词:
+A complete pale green melon with textured skin, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【57】荔枝 (Lychee)
+文件名: lychee.png
+正面提示词:
+A complete small red bumpy lychee fruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【58】椰子 (Coconut)
+文件名: coconut.png
+正面提示词:
+A complete brown hairy coconut with palm leaf, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【59】石榴 (Pomegranate)
+文件名: pomegranate.png
+正面提示词:
+A complete red pomegranate with a small crown, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【60】柿子 (Persimmon)
+文件名: persimmon.png
+正面提示词:
+A complete bright orange persimmon fruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【61】山竹 (Mangosteen)
+文件名: mangosteen.png
+正面提示词:
+A complete dark purple mangosteen with green cap, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【62】柚子 (Pomelo)
+文件名: pomelo.png
+正面提示词:
+A complete large yellow round pomelo fruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【63】木瓜 (Papaya)
+文件名: papaya.png
+正面提示词:
+A complete long orange papaya fruit with seeds, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【64】杏子 (Apricot)
+文件名: apricot.png
+正面提示词:
+A complete small orange apricot with soft skin, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【65】李子 (Plum)
+文件名: plum.png
+正面提示词:
+A complete round dark purple juicy plum, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【66】无花果 (Fig)
+文件名: fig.png
+正面提示词:
+A complete purple pear-shaped fig sliced open, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【67】杨桃 (Starfruit)
+文件名: starfruit.png
+正面提示词:
+A complete yellow star-shaped starfruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【68】榴莲 (Durian)
+文件名: durian.png
+正面提示词:
+A complete large green spiky durian fruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【69】蓝莓 (Blueberry)
+文件名: blueberry_alt.png
+正面提示词:
+A complete small cluster of blue berries, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【70】覆盆子 (Raspberry)
+文件名: raspberry.png
+正面提示词:
+A complete small bumpy red raspberry fruit, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【71】胡萝卜 (Carrot)
+文件名: carrot.png
+正面提示词:
+A complete long orange carrot with green leaves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【72】白菜 (Cabbage)
+文件名: cabbage.png
+正面提示词:
+A complete round cabbage with crisp green leaves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【73】西红柿 (Tomato)
+文件名: tomato.png
+正面提示词:
+A complete plump bright red tomato with stem, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【74】西兰花 (Broccoli)
+文件名: broccoli.png
+正面提示词:
+A complete green broccoli tree-like vegetable, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【75】土豆 (Potato)
+文件名: potato.png
+正面提示词:
+A complete chunky brown potato with tiny eyes, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【76】黄瓜 (Cucumber)
+文件名: cucumber.png
+正面提示词:
+A complete long green bumpy cucumber, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【77】茄子 (Eggplant)
+文件名: eggplant.png
+正面提示词:
+A complete smooth shiny purple eggplant, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【78】玉米 (Corn)
+文件名: corn.png
+正面提示词:
+A complete yellow ear of corn with green husks, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【79】南瓜 (Pumpkin)
+文件名: pumpkin.png
+正面提示词:
+A complete large round orange pumpkin, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【80】洋葱 (Onion)
+文件名: onion.png
+正面提示词:
+A complete round purple onion with thin skin, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【81】大蒜 (Garlic)
+文件名: garlic.png
+正面提示词:
+A complete white bulb of garlic with cloves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【82】辣椒 (Chili)
+文件名: chili.png
+正面提示词:
+A complete bright red spicy chili pepper, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【83】蘑菇 (Mushroom)
+文件名: mushroom.png
+正面提示词:
+A complete cute red mushroom with white spots, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【84】豌豆 (Pea)
+文件名: pea.png
+正面提示词:
+A complete green pea pod with small round peas, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【85】菠菜 (Spinach)
+文件名: spinach.png
+正面提示词:
+A complete bunch of fresh green spinach leaves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【86】芹菜 (Celery)
+文件名: celery.png
+正面提示词:
+A complete bundle of long green celery stalks, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【87】萝卜 (Radish)
+文件名: radish.png
+正面提示词:
+A complete round pink and white radish, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【88】红薯 (Sweet Potato)
+文件名: sweet_potato.png
+正面提示词:
+A complete long purple-skinned sweet potato, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【89】苦瓜 (Bitter Gourd)
+文件名: bitter_gourd.png
+正面提示词:
+A complete long bumpy green bitter gourd, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【90】丝瓜 (Luffa)
+文件名: luffa.png
+正面提示词:
+A complete long green luffa with ridges, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【91】芦笋 (Asparagus)
+文件名: asparagus.png
+正面提示词:
+A complete bundle of thin green asparagus spears, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【92】甜椒 (Bell Pepper)
+文件名: bell_pepper.png
+正面提示词:
+A complete shiny green bell pepper, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【93】菜花 (Cauliflower)
+文件名: cauliflower.png
+正面提示词:
+A complete white cauliflower with green leaves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【94】豆角 (Green Bean)
+文件名: green_bean.png
+正面提示词:
+A complete pile of thin long green beans, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【95】莲藕 (Lotus Root)
+文件名: lotus_root.png
+正面提示词:
+A complete sliced lotus root with holes, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【96】竹笋 (Bamboo Shoot)
+文件名: bamboo_shoot.png
+正面提示词:
+A complete small brown bamboo shoot, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【97】山药 (Yam)
+文件名: yam.png
+正面提示词:
+A complete long brown thin yam root, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【98】冬瓜 (Wax Gourd)
+文件名: wax_gourd.png
+正面提示词:
+A complete large long green wax gourd, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【99】荷兰豆 (Snow Pea)
+文件名: snow_pea.png
+正面提示词:
+A complete flat green snow pea pod, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【100】生菜 (Lettuce)
+文件名: lettuce.png
+正面提示词:
+A complete bunch of light green wavy lettuce, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【101】汽车 (Car)
+文件名: car.png
+正面提示词:
+A complete small rounded red car, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【102】公交车 (Bus)
+文件名: bus.png
+正面提示词:
+A complete big yellow school bus, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【103】飞机 (Airplane)
+文件名: airplane.png
+正面提示词:
+A complete chubby blue and white airplane, full aircraft visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【104】自行车 (Bicycle)
+文件名: bicycle.png
+正面提示词:
+A complete cute green bicycle with a bell, full bicycle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【105】摩托车 (Motorcycle)
+文件名: motorcycle.png
+正面提示词:
+A complete cute red motorcycle, full motorcycle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【106】火车 (Train)
+文件名: train.png
+正面提示词:
+A complete colorful steam engine train, full train visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【107】高铁 (High-speed Train)
+文件名: high_speed_train.png
+正面提示词:
+A complete sleek white high-speed train, full train visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【108】轮船 (Ship)
+文件名: ship.png
+正面提示词:
+A complete large white cruise ship, full ship visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【109】潜水艇 (Submarine)
+文件名: submarine.png
+正面提示词:
+A complete yellow submarine with periscope, full submarine visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【110】直升机 (Helicopter)
+文件名: helicopter.png
+正面提示词:
+A complete cute little helicopter, full helicopter visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【111】救护车 (Ambulance)
+文件名: ambulance.png
+正面提示词:
+A complete white ambulance with red cross, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【112】消防车 (Firetruck)
+文件名: firetruck.png
+正面提示词:
+A complete big red fire truck with ladder, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【113】警车 (Police Car)
+文件名: police_car.png
+正面提示词:
+A complete blue and white police car, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【114】卡车 (Truck)
+文件名: truck.png
+正面提示词:
+A complete large delivery truck, full truck visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【115】拖拉机 (Tractor)
+文件名: tractor.png
+正面提示词:
+A complete green farm tractor, full tractor visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【116】热气球 (Hot Air Balloon)
+文件名: hot_air_balloon.png
+正面提示词:
+A complete colorful striped hot air balloon, full balloon visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【117】飞船 (Spaceship)
+文件名: spaceship.png
+正面提示词:
+A complete round silver UFO spaceship, full craft visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【118】坦克 (Tank)
+文件名: tank.png
+正面提示词:
+A complete small green toy tank, full tank visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【119】挖掘机 (Excavator)
+文件名: excavator.png
+正面提示词:
+A complete yellow construction excavator, full machine visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【120】帆船 (Sailboat)
+文件名: sailboat.png
+正面提示词:
+A complete small wooden sailboat with sail, full boat visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【121】出租车 (Taxi)
+文件名: taxi.png
+正面提示词:
+A complete yellow city taxi with checkers, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【122】吊车 (Crane)
+文件名: crane.png
+正面提示词:
+A complete big yellow crane truck with hook, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【123】缆车 (Cable Car)
+文件名: cable_car.png
+正面提示词:
+A complete red cable car hanging on a wire, full car visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【124】划艇 (Canoe)
+文件名: canoe.png
+正面提示词:
+A complete small wooden canoe with a paddle, full canoe visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【125】飞艇 (Airship)
+文件名: airship.png
+正面提示词:
+A complete big silver oval airship, full airship visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【126】三轮车 (Tricycle)
+文件名: tricycle.png
+正面提示词:
+A complete small colorful kids tricycle, full tricycle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【127】滑板 (Skateboard)
+文件名: skateboard.png
+正面提示词:
+A complete cute wooden skateboard with wheels, full skateboard visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【128】压路机 (Steam Roller)
+文件名: steam_roller.png
+正面提示词:
+A complete yellow steam roller construction car, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【129】垃圾车 (Garbage Truck)
+文件名: garbage_truck.png
+正面提示词:
+A complete big green garbage truck, full truck visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【130】拖船 (Tugboat)
+文件名: tugboat.png
+正面提示词:
+A complete small strong red tugboat, full boat visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【131】叉车 (Forklift)
+文件名: forklift.png
+正面提示词:
+A complete small yellow forklift with forks, full forklift visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【132】赛车 (Racing Car)
+文件名: racing_car.png
+正面提示词:
+A complete fast red racing car with numbers, full car visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【133】房车 (RV)
+文件名: rv.png
+正面提示词:
+A complete big white rv motorhome, full vehicle visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【134】直升飞机 (Chopper)
+文件名: chopper.png
+正面提示词:
+A complete small black helicopter, full helicopter visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【135】电动车 (E-bike)
+文件名: ebike.png
+正面提示词:
+A complete small pink electric scooter, full scooter visible, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【136】铅笔 (Pencil)
+文件名: pencil.png
+正面提示词:
+A complete long yellow pencil with eraser, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【137】杯子 (Cup)
+文件名: cup.png
+正面提示词:
+A complete chunky blue ceramic cup, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【138】书本 (Book)
+文件名: book.png
+正面提示词:
+A complete thick colorful book, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【139】书包 (Schoolbag)
+文件名: schoolbag.png
+正面提示词:
+A complete cute blue backpack, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【140】牙刷 (Toothbrush)
+文件名: toothbrush.png
+正面提示词:
+A complete small green toothbrush, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【141】毛巾 (Towel)
+文件名: towel.png
+正面提示词:
+A complete soft folded fluffy white towel, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【142】梳子 (Comb)
+文件名: comb.png
+正面提示词:
+A complete small red hair comb, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【143】镜子 (Mirror)
+文件名: mirror.png
+正面提示词:
+A complete small hand mirror with handle, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【144】伞 (Umbrella)
+文件名: umbrella.png
+正面提示词:
+A complete bright yellow opened umbrella, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【145】帽子 (Hat)
+文件名: hat.png
+正面提示词:
+A complete cute blue baseball cap, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【146】鞋子 (Shoes)
+文件名: shoes.png
+正面提示词:
+A complete pair of small colorful sneakers, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【147】衣服 (Clothes)
+文件名: clothes.png
+正面提示词:
+A complete small cute t-shirt with a sun, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【148】床 (Bed)
+文件名: bed.png
+正面提示词:
+A complete cozy bed with soft pillow, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【149】椅子 (Chair)
+文件名: chair.png
+正面提示词:
+A complete small wooden chair, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【150】桌子 (Desk)
+文件名: desk.png
+正面提示词:
+A complete sturdy wooden desk, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【151】灯 (Lamp)
+文件名: lamp.png
+正面提示词:
+A complete small desk lamp with shade, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【152】电视 (TV)
+文件名: tv.png
+正面提示词:
+A complete flat screen television, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【153】手机 (Phone)
+文件名: phone.png
+正面提示词:
+A complete modern smartphone, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【154】电脑 (Computer)
+文件名: computer.png
+正面提示词:
+A complete desktop computer with monitor, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【155】钟表 (Clock)
+文件名: clock.png
+正面提示词:
+A complete round wall clock, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【156】剪刀 (Scissors)
+文件名: scissors.png
+正面提示词:
+A complete pair of small safety scissors, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【157】肥皂 (Soap)
+文件名: soap.png
+正面提示词:
+A complete bar of pink bubbly soap, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【158】盆 (Basin)
+文件名: basin.png
+正面提示词:
+A complete small round plastic basin, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【159】拖鞋 (Slippers)
+文件名: slippers.png
+正面提示词:
+A complete pair of soft fuzzy slippers, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【160】袜子 (Socks)
+文件名: socks.png
+正面提示词:
+A complete pair of striped colorful socks, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【161】碗 (Bowl)
+文件名: bowl.png
+正面提示词:
+A complete round ceramic cereal bowl, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【162】勺子 (Spoon)
+文件名: spoon.png
+正面提示词:
+A complete small shiny silver spoon, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【163】筷子 (Chopsticks)
+文件名: chopsticks.png
+正面提示词:
+A complete pair of wooden chopsticks, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【164】叉子 (Fork)
+文件名: fork.png
+正面提示词:
+A complete small shiny silver fork, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【165】锅 (Pot)
+文件名: pot.png
+正面提示词:
+A complete metal cooking pot with a lid, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【166】冰箱 (Fridge)
+文件名: fridge.png
+正面提示词:
+A complete big silver refrigerator, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【167】洗衣机 (Washing Machine)
+文件名: washing_machine.png
+正面提示词:
+A complete white front-load washing machine, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【168】空调 (Air Conditioner)
+文件名: air_conditioner.png
+正面提示词:
+A complete white wall-mounted air conditioner, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【169】风扇 (Fan)
+文件名: fan.png
+正面提示词:
+A complete small desk fan with blue blades, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【170】吹风机 (Hairdryer)
+文件名: hairdryer.png
+正面提示词:
+A complete small red hairdryer, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【171】钥匙 (Key)
+文件名: key.png
+正面提示词:
+A complete shiny gold key on a ring, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【172】钱包 (Wallet)
+文件名: wallet.png
+正面提示词:
+A complete small brown leather wallet, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【173】纸巾 (Tissue)
+文件名: tissue.png
+正面提示词:
+A complete box of soft white tissues, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【174】玩具熊 (Teddy Bear)
+文件名: teddy_bear.png
+正面提示词:
+A complete soft brown teddy bear, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【175】积木 (Blocks)
+文件名: blocks.png
+正面提示词:
+A complete pile of colorful wooden blocks, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【176】太阳 (Sun)
+文件名: sun.png
+正面提示词:
+A complete bright happy yellow sun with rays, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【177】月亮 (Moon)
+文件名: moon.png
+正面提示词:
+A complete yellow crescent moon with a face, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【178】星星 (Star)
+文件名: star.png
+正面提示词:
+A complete glowing yellow 3D star, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【179】云朵 (Cloud)
+文件名: cloud.png
+正面提示词:
+A complete soft fluffy white cloud, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【180】彩虹 (Rainbow)
+文件名: rainbow.png
+正面提示词:
+A complete colorful arched rainbow with clouds, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【181】雨 (Rain)
+文件名: rain.png
+正面提示词:
+A complete scene of small blue rain drops falling, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【182】雪 (Snow)
+文件名: snow.png
+正面提示词:
+A complete white snowflake with simple pretty pattern, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【183】风 (Wind)
+文件名: wind.png
+正面提示词:
+A complete soft white swirls representing wind, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【184】雷电 (Lightning)
+文件名: lightning.png
+正面提示词:
+A complete soft stylized yellow lightning bolt, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【185】大山 (Mountain)
+文件名: mountain.png
+正面提示词:
+A complete tall mountain with snow on top, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【186】大海 (Ocean)
+文件名: ocean.png
+正面提示词:
+A complete blue ocean waves with white foam, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【187】森林 (Forest)
+文件名: forest.png
+正面提示词:
+A complete group of green pine trees, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【188】花朵 (Flower)
+文件名: flower.png
+正面提示词:
+A complete bright pink flower with green leaves, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【189】草地 (Grass)
+文件名: grass.png
+正面提示词:
+A complete patch of soft green grass, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【190】树木 (Tree)
+文件名: tree.png
+正面提示词:
+A complete big tree with green leaves and trunk, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【191】河流 (River)
+文件名: river.png
+正面提示词:
+A complete winding blue river with small rocks, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【192】湖泊 (Lake)
+文件名: lake.png
+正面提示词:
+A complete calm blue lake with reflection, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【193】火 (Fire)
+文件名: fire.png
+正面提示词:
+A complete small warm orange campfire, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【194】岩石 (Rock)
+文件名: rock.png
+正面提示词:
+A complete smooth grey round rock, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【195】岛屿 (Island)
+文件名: island.png
+正面提示词:
+A complete small island with a palm tree, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【196】面包 (Bread)
+文件名: bread.png
+正面提示词:
+A complete loaf of fresh brown bread, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【197】牛奶 (Milk)
+文件名: milk.png
+正面提示词:
+A complete carton of fresh white milk, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【198】鸡蛋 (Egg)
+文件名: egg.png
+正面提示词:
+A complete white egg in a small cup, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【199】蛋糕 (Cake)
+文件名: cake.png
+正面提示词:
+A complete colorful birthday cake with candles, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【200】饼干 (Cookie)
+文件名: cookie.png
+正面提示词:
+A complete round chocolate chip cookie, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【201】糖果 (Candy)
+文件名: candy.png
+正面提示词:
+A complete colorful wrapped sweet candy, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【202】冰淇淋 (Ice Cream)
+文件名: ice_cream.png
+正面提示词:
+A complete pink ice cream cone with sprinkles, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【203】果汁 (Juice)
+文件名: juice.png
+正面提示词:
+A complete glass of orange juice with a straw, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【204】水 (Water)
+文件名: water.png
+正面提示词:
+A complete glass of clear pure water, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【205】汉堡 (Burger)
+文件名: burger.png
+正面提示词:
+A complete big burger with cheese and lettuce, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【206】薯条 (Fries)
+文件名: fries.png
+正面提示词:
+A complete box of golden crispy french fries, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【207】披萨 (Pizza)
+文件名: pizza.png
+正面提示词:
+A complete slice of cheesy pepperoni pizza, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【208】面条 (Noodles)
+文件名: noodles.png
+正面提示词:
+A complete bowl of yellow noodles with egg, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【209】米饭 (Rice)
+文件名: rice.png
+正面提示词:
+A complete bowl of fluffy white rice, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【210】包子 (Steamed Bun)
+文件名: steamed_bun.png
+正面提示词:
+A complete white fluffy steamed bun, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【211】饺子 (Dumpling)
+文件名: dumpling.png
+正面提示词:
+A complete plate of small white dumplings, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【212】巧克力 (Chocolate)
+文件名: chocolate.png
+正面提示词:
+A complete bar of brown chocolate, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【213】甜甜圈 (Donut)
+文件名: donut.png
+正面提示词:
+A complete pink glazed donut with sprinkles, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【214】三明治 (Sandwich)
+文件名: sandwich.png
+正面提示词:
+A complete triangle sandwich with ham, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【215】寿司 (Sushi)
+文件名: sushi.png
+正面提示词:
+A complete piece of sushi with fish and rice, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【216】汤 (Soup)
+文件名: soup.png
+正面提示词:
+A complete warm bowl of vegetable soup, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【217】蜂蜜 (Honey)
+文件名: honey.png
+正面提示词:
+A complete jar of golden sweet honey, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【218】奶酪 (Cheese)
+文件名: cheese.png
+正面提示词:
+A complete wedge of yellow Swiss cheese, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【219】爆米花 (Popcorn)
+文件名: popcorn.png
+正面提示词:
+A complete bucket of white fluffy popcorn, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【220】棒棒糖 (Lollipop)
+文件名: lollipop.png
+正面提示词:
+A complete colorful swirled lollipop, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【221】眼睛 (Eyes)
+文件名: eyes.png
+正面提示词:
+A complete pair of big bright twinkling eyes, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【222】鼻子 (Nose)
+文件名: nose.png
+正面提示词:
+A complete small cute button nose, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【223】嘴巴 (Mouth)
+文件名: mouth.png
+正面提示词:
+A complete happy smiling mouth with red lips, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【224】耳朵 (Ears)
+文件名: ears.png
+正面提示词:
+A complete pair of small rounded ears, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【225】头发 (Hair)
+文件名: hair.png
+正面提示词:
+A complete bunch of soft brown wavy hair, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【226】手 (Hand)
+文件名: hand.png
+正面提示词:
+A complete small waving hand with five fingers, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【227】脚 (Foot)
+文件名: foot.png
+正面提示词:
+A complete small foot with five tiny toes, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【228】胳膊 (Arm)
+文件名: arm.png
+正面提示词:
+A complete strong small arm with a hand, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【229】腿 (Leg)
+文件名: leg.png
+正面提示词:
+A complete long leg with a small foot, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【230】头 (Head)
+文件名: head.png
+正面提示词:
+A complete round head with a happy face, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【231】手指 (Finger)
+文件名: finger.png
+正面提示词:
+A complete small pointing index finger, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【232】牙齿 (Teeth)
+文件名: teeth.png
+正面提示词:
+A complete row of white shiny clean teeth, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【233】舌头 (Tongue)
+文件名: tongue.png
+正面提示词:
+A complete small pink sticking-out tongue, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【234】肩膀 (Shoulder)
+文件名: shoulder.png
+正面提示词:
+A complete small rounded shoulder, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy
+
+------------------------------------------------------------
+【235】肚子 (Tummy)
+文件名: tummy.png
+正面提示词:
+A complete round soft tummy, single subject only, entire object fully visible in frame, no cropping no cut off, centered composition, plain white background, isolated on white, product shot style, cute 3D clay style, children's educational illustration, bright vibrant colors, soft studio lighting, simple clean shapes, rounded friendly, high detail, masterpiece, 1:1 aspect ratio
+负向提示词:
+cropped, cut off, out of frame, partial object, half visible, truncated, amputated, multiple objects, cluttered, busy background, crowded, messy, blurry, low quality, worst quality, distorted, deformed, disfigured, text, watermark, signature, logo, ugly, duplicate, extra limbs, bad anatomy

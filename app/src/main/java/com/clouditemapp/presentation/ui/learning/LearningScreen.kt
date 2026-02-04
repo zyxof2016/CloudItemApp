@@ -249,15 +249,12 @@ fun ItemImage(
             .fillMaxSize()
             .clip(RoundedCornerShape(32.dp))
             .background(Color.White)
-            .clickable { onPlayClick() }
-            .padding(24.dp),
+            .clickable { onPlayClick() },
         contentAlignment = Alignment.Center
     ) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .clip(RoundedCornerShape(24.dp))
-                .background(Color(0xFFE3F2FD))
                 .scale(scale),
             contentAlignment = Alignment.Center
         ) {
@@ -269,7 +266,8 @@ fun ItemImage(
                     .error(R.drawable.ic_error_image)
                     .build(),
                 contentDescription = item.nameCN,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.fillMaxSize(),
+                contentScale = androidx.compose.ui.layout.ContentScale.Crop // 填充完全
             )
         }
     }
@@ -395,15 +393,16 @@ fun ItemCard(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(24.dp),
+                .padding(16.dp), // 减小整体内边距
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // 图片展示区域
             Box(
                 modifier = Modifier
-                    .size(280.dp)
+                    .fillMaxWidth()
+                    .aspectRatio(1f) // 使用 1:1 比例，消除上下留白
                     .clip(RoundedCornerShape(24.dp))
-                    .background(Color(0xFFE3F2FD))
+                    .background(Color.White)
                     .clickable { onPlayClick() }
                     .scale(scale),
                 contentAlignment = Alignment.Center
@@ -416,7 +415,8 @@ fun ItemCard(
                         .error(R.drawable.ic_error_image)
                         .build(),
                     contentDescription = item.nameCN,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = androidx.compose.ui.layout.ContentScale.Crop
                 )
             }
 

@@ -599,22 +599,29 @@ fun GamePlay(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.Center
                         ) {
-                            AsyncImage(
-                                model = ImageRequest.Builder(context)
-                                    .data(imageSource)
-                                    .crossfade(true)
-                                    .build(),
-                                contentDescription = option.nameCN,
+                            Box(
                                 modifier = Modifier
-                                    .size(100.dp)
-                                    .padding(8.dp)
-                            )
+                                    .weight(1f)
+                                    .fillMaxWidth(), // 移除内边距，让图片填充更大
+                                contentAlignment = Alignment.Center
+                            ) {
+                                AsyncImage(
+                                    model = ImageRequest.Builder(context)
+                                        .data(imageSource)
+                                        .crossfade(true)
+                                        .build(),
+                                    contentDescription = option.nameCN,
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentScale = androidx.compose.ui.layout.ContentScale.Crop // 填充完全
+                                )
+                            }
                             if (selectedOptionId != null) {
                                 Text(
                                     text = option.nameCN,
-                                    fontSize = 16.sp,
+                                    fontSize = 18.sp, // 稍微加大字体
                                     fontWeight = FontWeight.Bold,
-                                    color = if (isSelected) Color.White else Color(0xFF0277BD)
+                                    color = if (isSelected) Color.White else Color(0xFF0277BD),
+                                    modifier = Modifier.padding(bottom = 8.dp)
                                 )
                             }
                         }
