@@ -5,12 +5,20 @@ import com.clouditemapp.data.local.entity.AchievementEntity
 import com.clouditemapp.domain.model.Achievement
 import com.clouditemapp.domain.repository.AchievementRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class AchievementRepositoryImpl @Inject constructor(
     private val achievementDao: AchievementDao
 ) : AchievementRepository {
+
+    private val _newUnlockedAchievements = MutableSharedFlow<Achievement>(extraBufferCapacity = 1)
+    override val newUnlockedAchievements: SharedFlow<Achievement> = _newUnlockedAchievements.asSharedFlow()
 
     override fun getAllAchievements(): Flow<List<Achievement>> {
         return achievementDao.getAllAchievements().map { entities ->
@@ -35,7 +43,11 @@ class AchievementRepositoryImpl @Inject constructor(
     }
 
     override suspend fun unlockAchievement(id: String) {
-        achievementDao.unlockAchievement(id, System.currentTimeMillis())
+        val achievement = getAchievementById(id)
+        if (achievement != null && !achievement.unlocked) {
+            achievementDao.unlockAchievement(id, System.currentTimeMillis())
+            _newUnlockedAchievements.emit(achievement.copy(unlocked = true, unlockedTime = System.currentTimeMillis()))
+        }
     }
 
     override suspend fun insertAchievement(achievement: Achievement) {

@@ -22,11 +22,19 @@ class DataInitializer @Inject constructor(
 
     fun initializeData() {
         CoroutineScope(Dispatchers.IO).launch {
-            // 检查是否已经初始化
-            val items = itemDao.getAllItems().first()
-            if (items.isEmpty()) {
-                insertSampleItems()
-                insertSampleAchievements()
+            try {
+                // 检查是否已经初始化
+                val items = itemDao.getAllItems().first()
+                if (items.isEmpty()) {
+                    android.util.Log.d("DataInitializer", "Starting data initialization...")
+                    insertSampleItems()
+                    insertSampleAchievements()
+                    android.util.Log.d("DataInitializer", "Data initialization completed successfully.")
+                } else {
+                    android.util.Log.d("DataInitializer", "Data already initialized, skipping.")
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("DataInitializer", "Error during data initialization: ${e.message}", e)
             }
         }
     }

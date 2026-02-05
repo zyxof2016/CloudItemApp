@@ -32,9 +32,17 @@ import com.clouditemapp.presentation.ui.common.rememberWindowSizeClass
 import com.clouditemapp.presentation.ui.common.ResourceUtils
 import com.clouditemapp.presentation.viewmodel.LearningViewModel
 
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalContext
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.core.content.ContextCompat
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.airbnb.lottie.compose.*
 
 @OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
@@ -46,9 +54,39 @@ fun LearningScreen(
     val currentIndex by viewModel.currentIndex.collectAsState()
     val selectedCategory by viewModel.selectedCategory.collectAsState()
     val isPlaying by viewModel.isPlaying.collectAsState()
-    val windowSize = rememberWindowSizeClass()
-
+    val isListening by viewModel.isListening.collectAsState()
+    val speechResult by viewModel.speechResult.collectAsState()
+    val recognizedText by viewModel.recognizedText.collectAsState()
+    val showCategoryFinished by viewModel.showCategoryFinished.collectAsState()
+    
+    val context = LocalContext.current
     val currentItem = viewModel.getCurrentItem()
+
+    var showParentGate by remember { mutableStateOf(false) }
+    var mathProblem by remember { mutableStateOf(Pair(0, 0)) }
+    var parentGateAnswer by remember { mutableStateOf("") }
+    var showEditOptions by remember { mutableStateOf(false) }
+
+    val imagePickerLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.GetContent()
+    ) { uri ->
+        uri?.let {
+            currentItem?.let { item ->
+                viewModel.saveCustomImage(item.id, it, context)
+            }
+        }
+    }
+
+    val windowSize = rememberWindowSizeClass()
+    val haptic = LocalHapticFeedback.current
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            viewModel.startVoiceRecognition()
+        }
+    }
 
     // 状态管理：PagerState 与 ViewModel 的 currentIndex 同步
     val pagerState = rememberPagerState(initialPage = 0) {
@@ -56,15 +94,20 @@ fun LearningScreen(
     }
 
     // 当 ViewModel 中的 currentIndex 改变时（例如通过分类切换或按钮点击），更新 PagerState
-    LaunchedEffect(currentIndex) {
+    LaunchedEffect(currentIndex, selectedCategory) {
         if (pagerState.currentPage != currentIndex && items.isNotEmpty()) {
-            pagerState.animateScrollToPage(currentIndex)
+            if (currentIndex == 0) {
+                pagerState.scrollToPage(0)
+            } else {
+                pagerState.animateScrollToPage(currentIndex)
+            }
         }
     }
 
     // 当用户手动滑动 Pager 时，更新 ViewModel 中的 currentIndex
     LaunchedEffect(pagerState.currentPage) {
         if (items.isNotEmpty() && pagerState.currentPage != currentIndex) {
+            haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
             viewModel.goToItem(pagerState.currentPage)
         }
     }
@@ -99,6 +142,14 @@ fun LearningScreen(
                 navigationIcon = {
                     IconButton(onClick = { navController.navigateUp() }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "返回")
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { 
+                        mathProblem = Pair((5..15).random(), (5..15).random())
+                        showParentGate = true 
+                    }) {
+                        Icon(Icons.Default.Settings, contentDescription = "家长编辑", tint = Color(0xFF0277BD))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -156,14 +207,27 @@ fun LearningScreen(
                                     ItemImage(
                                         item = item,
                                         scale = if (page == currentIndex) scale else 1f,
-                                        onPlayClick = { viewModel.togglePlaying() }
+                                        onPlayClick = { 
+                                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                            viewModel.togglePlaying() 
+                                        }
                                     )
                                 }
                                 Box(modifier = Modifier.weight(1f)) {
                                     ItemInfo(
                                         item = item,
                                         onPlayClick = { viewModel.togglePlaying() },
-                                        isPlaying = if (page == currentIndex) isPlaying else false
+                                        isPlaying = if (page == currentIndex) isPlaying else false,
+                                        isListening = if (page == currentIndex) isListening else false,
+                                        speechResult = if (page == currentIndex) speechResult else null,
+                                        recognizedText = if (page == currentIndex) recognizedText else "",
+                                        onMicClick = {
+                                            if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                                                if (isListening) viewModel.stopVoiceRecognition() else viewModel.startVoiceRecognition()
+                                            } else {
+                                                permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+                                            }
+                                        }
                                     )
                                 }
                             }
@@ -182,8 +246,21 @@ fun LearningScreen(
                             ItemCard(
                                 item = item,
                                 scale = if (page == currentIndex) scale else 1f,
-                                onPlayClick = { viewModel.togglePlaying() },
-                                isPlaying = if (page == currentIndex) isPlaying else false
+                                onPlayClick = { 
+                                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                    viewModel.togglePlaying() 
+                                },
+                                isPlaying = if (page == currentIndex) isPlaying else false,
+                                isListening = if (page == currentIndex) isListening else false,
+                                speechResult = if (page == currentIndex) speechResult else null,
+                                recognizedText = if (page == currentIndex) recognizedText else "",
+                                onMicClick = {
+                                    if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+                                        if (isListening) viewModel.stopVoiceRecognition() else viewModel.startVoiceRecognition()
+                                    } else {
+                                        permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+                                    }
+                                }
                             )
                         }
                     }
@@ -231,6 +308,155 @@ fun LearningScreen(
                     }
                 }
             }
+
+            // 家长验证弹窗
+            if (showParentGate) {
+                androidx.compose.ui.window.Dialog(onDismissRequest = { showParentGate = false }) {
+                    Card(
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        modifier = Modifier.padding(16.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(24.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text("家长验证", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color(0xFF0277BD))
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text("请输入答案以进入编辑模式：", fontSize = 14.sp, color = Color.Gray)
+                            Spacer(modifier = Modifier.height(16.dp))
+                            Text("${mathProblem.first} + ${mathProblem.second} = ?", fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                            Spacer(modifier = Modifier.height(16.dp))
+                            OutlinedTextField(
+                                value = parentGateAnswer,
+                                onValueChange = { parentGateAnswer = it },
+                                keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
+                                    keyboardType = androidx.compose.ui.text.input.KeyboardType.Number
+                                ),
+                                modifier = Modifier.width(100.dp),
+                                singleLine = true
+                            )
+                            Spacer(modifier = Modifier.height(24.dp))
+                            Button(
+                                onClick = {
+                                    if (parentGateAnswer.toIntOrNull() == mathProblem.first + mathProblem.second) {
+                                        showParentGate = false
+                                        parentGateAnswer = ""
+                                        showEditOptions = true
+                                    }
+                                },
+                                shape = RoundedCornerShape(12.dp)
+                            ) {
+                                Text("确认")
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 编辑选项弹窗
+            if (showEditOptions) {
+                androidx.compose.ui.window.Dialog(onDismissRequest = { showEditOptions = false }) {
+                    Card(
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        modifier = Modifier.padding(16.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(24.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text("编辑图片", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color(0xFF0277BD))
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Text("为“${currentItem?.nameCN}”更换图片", fontSize = 14.sp, color = Color.Gray)
+                            Spacer(modifier = Modifier.height(24.dp))
+                            
+                            Button(
+                                onClick = {
+                                    showEditOptions = false
+                                    imagePickerLauncher.launch("image/*")
+                                },
+                                modifier = Modifier.fillMaxWidth(),
+                                shape = RoundedCornerShape(12.dp),
+                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF64B5F6))
+                            ) {
+                                Icon(Icons.Default.PhotoLibrary, contentDescription = null)
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text("从相册选择")
+                            }
+                            
+                            Spacer(modifier = Modifier.height(12.dp))
+                            
+                            OutlinedButton(
+                                onClick = {
+                                    showEditOptions = false
+                                    currentItem?.let { viewModel.resetCustomImage(it.id) }
+                                },
+                                modifier = Modifier.fillMaxWidth(),
+                                shape = RoundedCornerShape(12.dp),
+                                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFEF5350))
+                            ) {
+                                Icon(Icons.Default.Restore, contentDescription = null, tint = Color(0xFFEF5350))
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text("恢复默认图", color = Color(0xFFEF5350))
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 分类学习完成弹窗
+            if (showCategoryFinished) {
+                androidx.compose.ui.window.Dialog(onDismissRequest = { viewModel.dismissCategoryFinished() }) {
+                    Card(
+                        shape = RoundedCornerShape(32.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 16.dp),
+                        modifier = Modifier.padding(16.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(24.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.celebration))
+                            val progress by animateLottieCompositionAsState(composition, iterations = LottieConstants.IterateForever)
+                            
+                            Box(modifier = Modifier.size(150.dp), contentAlignment = Alignment.Center) {
+                                LottieAnimation(composition = composition, progress = { progress })
+                                Text(text = "🎓", fontSize = 64.sp)
+                            }
+                            
+                            Text(
+                                text = "太棒了！",
+                                fontSize = 24.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF0277BD)
+                            )
+                            
+                            Spacer(modifier = Modifier.height(8.dp))
+                            
+                            Text(
+                                text = "你已经学完了 ${selectedCategory}！",
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Bold,
+                                textAlign = TextAlign.Center,
+                                color = Color(0xFF81C784)
+                            )
+                            
+                            Spacer(modifier = Modifier.height(24.dp))
+                            
+                            Button(
+                                onClick = { viewModel.dismissCategoryFinished() },
+                                shape = RoundedCornerShape(16.dp),
+                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF0277BD)),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                Text("继续加油！", fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -242,7 +468,7 @@ fun ItemImage(
     onPlayClick: () -> Unit
 ) {
     val context = LocalContext.current
-    val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category)
+    val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category, item.customImagePath)
     
     Box(
         modifier = Modifier
@@ -277,7 +503,11 @@ fun ItemImage(
 fun ItemInfo(
     item: com.clouditemapp.domain.model.Item,
     onPlayClick: () -> Unit,
-    isPlaying: Boolean
+    isPlaying: Boolean,
+    isListening: Boolean,
+    speechResult: Boolean?,
+    recognizedText: String,
+    onMicClick: () -> Unit
 ) {
     Card(
         modifier = Modifier.fillMaxSize(),
@@ -308,20 +538,69 @@ fun ItemInfo(
                 textAlign = TextAlign.Center
             )
             Spacer(modifier = Modifier.height(32.dp))
-            IconButton(
-                onClick = onPlayClick,
-                modifier = Modifier
-                    .size(80.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFF81C784))
+            
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(24.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(
-                    if (isPlaying) Icons.Default.Pause else Icons.Default.VolumeUp,
-                    contentDescription = "播放读音",
-                    tint = Color.White,
-                    modifier = Modifier.size(40.dp)
-                )
+                // 播放按钮
+                IconButton(
+                    onClick = onPlayClick,
+                    modifier = Modifier
+                        .size(80.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFF81C784))
+                ) {
+                    Icon(
+                        if (isPlaying) Icons.Default.Pause else Icons.Default.VolumeUp,
+                        contentDescription = "播放读音",
+                        tint = Color.White,
+                        modifier = Modifier.size(40.dp)
+                    )
+                }
+
+                // 跟我读按钮
+                Box(contentAlignment = Alignment.Center) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        if (recognizedText.isNotEmpty()) {
+                            Text(
+                                text = recognizedText,
+                                fontSize = 14.sp,
+                                color = Color(0xFF0277BD),
+                                modifier = Modifier.padding(bottom = 4.dp)
+                            )
+                        }
+                        Box(contentAlignment = Alignment.BottomEnd) {
+                            IconButton(
+                                onClick = onMicClick,
+                                modifier = Modifier
+                                    .size(80.dp)
+                                    .clip(CircleShape)
+                                    .background(if (isListening) Color(0xFFEF5350) else Color(0xFF64B5F6))
+                            ) {
+                                Icon(
+                                    if (isListening) Icons.Default.MicOff else Icons.Default.Mic,
+                                    contentDescription = "跟我读",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(40.dp)
+                                )
+                            }
+                            
+                            if (speechResult != null) {
+                                Text(
+                                    text = if (speechResult) "✅" else "❌",
+                                    fontSize = 24.sp,
+                                    modifier = Modifier
+                                        .offset(x = 8.dp, y = 8.dp)
+                                        .background(Color.White, CircleShape)
+                                        .padding(4.dp)
+                                )
+                            }
+                        }
+                    }
+                }
             }
+            
             Spacer(modifier = Modifier.height(32.dp))
             Text(
                 text = item.descriptionCN,
@@ -375,10 +654,14 @@ fun ItemCard(
     item: com.clouditemapp.domain.model.Item,
     scale: Float,
     onPlayClick: () -> Unit,
-    isPlaying: Boolean
+    isPlaying: Boolean,
+    isListening: Boolean,
+    speechResult: Boolean?,
+    recognizedText: String,
+    onMicClick: () -> Unit
 ) {
     val context = LocalContext.current
-    val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category)
+    val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category, item.customImagePath)
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -444,20 +727,67 @@ fun ItemCard(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // 播放按钮
-            IconButton(
-                onClick = onPlayClick,
-                modifier = Modifier
-                    .size(64.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFF81C784))
+            // 按钮组
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(
-                    if (isPlaying) Icons.Default.Pause else Icons.Default.VolumeUp,
-                    contentDescription = "播放读音",
-                    tint = Color.White,
-                    modifier = Modifier.size(32.dp)
-                )
+                // 播放按钮
+                IconButton(
+                    onClick = onPlayClick,
+                    modifier = Modifier
+                        .size(64.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFF81C784))
+                ) {
+                    Icon(
+                        if (isPlaying) Icons.Default.Pause else Icons.Default.VolumeUp,
+                        contentDescription = "播放读音",
+                        tint = Color.White,
+                        modifier = Modifier.size(32.dp)
+                    )
+                }
+
+                // 跟我读按钮
+                Box(contentAlignment = Alignment.Center) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        if (recognizedText.isNotEmpty()) {
+                            Text(
+                                text = recognizedText,
+                                fontSize = 12.sp,
+                                color = Color(0xFF0277BD),
+                                modifier = Modifier.padding(bottom = 4.dp)
+                            )
+                        }
+                        Box(contentAlignment = Alignment.BottomEnd) {
+                            IconButton(
+                                onClick = onMicClick,
+                                modifier = Modifier
+                                    .size(64.dp)
+                                    .clip(CircleShape)
+                                    .background(if (isListening) Color(0xFFEF5350) else Color(0xFF64B5F6))
+                            ) {
+                                Icon(
+                                    if (isListening) Icons.Default.MicOff else Icons.Default.Mic,
+                                    contentDescription = "跟我读",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(32.dp)
+                                )
+                            }
+                            
+                            if (speechResult != null) {
+                                Text(
+                                    text = if (speechResult) "✅" else "❌",
+                                    fontSize = 18.sp,
+                                    modifier = Modifier
+                                        .offset(x = 4.dp, y = 4.dp)
+                                        .background(Color.White, CircleShape)
+                                        .padding(2.dp)
+                                )
+                            }
+                        }
+                    }
+                }
             }
 
             Spacer(modifier = Modifier.height(16.dp))

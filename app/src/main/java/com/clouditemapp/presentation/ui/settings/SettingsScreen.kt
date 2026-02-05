@@ -30,6 +30,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.clouditemapp.presentation.ui.common.WindowSizeClass
+import com.clouditemapp.presentation.ui.common.rememberWindowSizeClass
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
@@ -63,7 +65,7 @@ class SettingsViewModel @Inject constructor(
     fun toggleMusic(enabled: Boolean) {
         viewModelScope.launch {
             preferencesManager.setMusicEnabled(enabled)
-            // TODO: Implement background music control in AudioManager
+            audioManager.setMusicEnabled(enabled)
         }
     }
 
@@ -102,6 +104,8 @@ fun SettingsScreen(
     navController: NavController,
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
+    val windowSize = rememberWindowSizeClass()
+    val isTablet = windowSize == WindowSizeClass.Expanded
     val soundEnabled by viewModel.isSoundEnabled.collectAsState()
     val musicEnabled by viewModel.isMusicEnabled.collectAsState()
     val language by viewModel.language.collectAsState()
@@ -144,68 +148,167 @@ fun SettingsScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(16.dp),
+                    .padding(if (isTablet) 32.dp else 16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                // 声音设置
-                SettingsSection(title = "声音设置") {
-                    SwitchItem(
-                        title = "音效",
-                        description = "开启/关闭点击和反馈音效",
-                        checked = soundEnabled,
-                        onCheckedChange = { viewModel.toggleSound(it) }
-                    )
+                if (isTablet) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(1f),
+                        horizontalArrangement = Arrangement.spacedBy(24.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            // 声音设置
+                            SettingsSection(title = "声音设置") {
+                                SwitchItem(
+                                    title = "音效",
+                                    description = "开启/关闭点击和反馈音效",
+                                    checked = soundEnabled,
+                                    onCheckedChange = { viewModel.toggleSound(it) }
+                                )
 
-                    SwitchItem(
-                        title = "背景音乐",
-                        description = "开启/关闭背景音乐",
-                        checked = musicEnabled,
-                        onCheckedChange = { viewModel.toggleMusic(it) }
-                    )
+                                SwitchItem(
+                                    title = "背景音乐",
+                                    description = "开启/关闭背景音乐",
+                                    checked = musicEnabled,
+                                    onCheckedChange = { viewModel.toggleMusic(it) }
+                                )
+                            }
+
+                            // 语言设置
+                            SettingsSection(title = "语言设置") {
+                                DropdownItem(
+                                    title = "语言",
+                                    description = "选择应用语言",
+                                    value = language,
+                                    options = listOf("中文", "English", "双语"),
+                                    onValueChange = { viewModel.setLanguage(it) }
+                                )
+                            }
+                        }
+
+                        Column(
+                            modifier = Modifier.weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            // 显示设置
+                            SettingsSection(title = "显示设置") {
+                                SliderItem(
+                                    title = "字体大小",
+                                    description = "调整应用字体大小",
+                                    value = fontScale,
+                                    onValueChange = { viewModel.setFontScale(it) }
+                                )
+
+                                SwitchItem(
+                                    title = "护眼模式",
+                                    description = "强制学习15分钟后休息2分钟",
+                                    checked = isEyeProtectionEnabled,
+                                    onCheckedChange = { viewModel.toggleEyeProtection(it) }
+                                )
+                            }
+
+                            // 关于
+                            SettingsSection(title = "关于") {
+                                AboutItem(
+                                    title = "软件名称",
+                                    value = "云朵识物乐园"
+                                )
+                                AboutItem(
+                                    title = "当前版本",
+                                    value = "${BuildConfig.VERSION_NAME}"
+                                )
+                                AboutItem(
+                                    title = "开发者",
+                                    value = "云朵团队"
+                                )
+                                Divider(modifier = Modifier.padding(vertical = 4.dp), color = Color.LightGray.copy(alpha = 0.3f))
+                                Text(
+                                    text = "本应用专为 2-6 岁幼儿设计，采用 AI 辅助生成的精美 3D 风格素材，结合科学的认物学习法，助力宝宝快乐成长。",
+                                    fontSize = 12.sp,
+                                    color = Color.Gray,
+                                    lineHeight = 18.sp,
+                                    modifier = Modifier.padding(top = 4.dp)
+                                )
+                            }
+                        }
+                    }
+                } else {
+                    // 手机布局
+                    // 声音设置
+                    SettingsSection(title = "声音设置") {
+                        SwitchItem(
+                            title = "音效",
+                            description = "开启/关闭点击和反馈音效",
+                            checked = soundEnabled,
+                            onCheckedChange = { viewModel.toggleSound(it) }
+                        )
+
+                        SwitchItem(
+                            title = "背景音乐",
+                            description = "开启/关闭背景音乐",
+                            checked = musicEnabled,
+                            onCheckedChange = { viewModel.toggleMusic(it) }
+                        )
+                    }
+
+                    // 语言设置
+                    SettingsSection(title = "语言设置") {
+                        DropdownItem(
+                            title = "语言",
+                            description = "选择应用语言",
+                            value = language,
+                            options = listOf("中文", "English", "双语"),
+                            onValueChange = { viewModel.setLanguage(it) }
+                        )
+                    }
+
+                    // 显示设置
+                    SettingsSection(title = "显示设置") {
+                        SliderItem(
+                            title = "字体大小",
+                            description = "调整应用字体大小",
+                            value = fontScale,
+                            onValueChange = { viewModel.setFontScale(it) }
+                        )
+
+                        SwitchItem(
+                            title = "护眼模式",
+                            description = "强制学习15分钟后休息2分钟",
+                            checked = isEyeProtectionEnabled,
+                            onCheckedChange = { viewModel.toggleEyeProtection(it) }
+                        )
+                    }
+
+                    // 关于
+                    SettingsSection(title = "关于") {
+                        AboutItem(
+                            title = "软件名称",
+                            value = "云朵识物乐园"
+                        )
+                        AboutItem(
+                            title = "当前版本",
+                            value = "${BuildConfig.VERSION_NAME}"
+                        )
+                        AboutItem(
+                            title = "开发者",
+                            value = "云朵团队"
+                        )
+                        Divider(modifier = Modifier.padding(vertical = 4.dp), color = Color.LightGray.copy(alpha = 0.3f))
+                        Text(
+                            text = "本应用专为 2-6 岁幼儿设计，致力于提供寓教于乐的识物体验。",
+                            fontSize = 12.sp,
+                            color = Color.Gray,
+                            modifier = Modifier.padding(top = 4.dp)
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.weight(1f))
                 }
-
-                // 语言设置
-                SettingsSection(title = "语言设置") {
-                    DropdownItem(
-                        title = "语言",
-                        description = "选择应用语言",
-                        value = language,
-                        options = listOf("中文", "English", "双语"),
-                        onValueChange = { viewModel.setLanguage(it) }
-                    )
-                }
-
-                // 显示设置
-                SettingsSection(title = "显示设置") {
-                    SliderItem(
-                        title = "字体大小",
-                        description = "调整应用字体大小",
-                        value = fontScale,
-                        onValueChange = { viewModel.setFontScale(it) }
-                    )
-
-                    SwitchItem(
-                        title = "护眼模式",
-                        description = "强制学习15分钟后休息2分钟",
-                        checked = isEyeProtectionEnabled,
-                        onCheckedChange = { viewModel.toggleEyeProtection(it) }
-                    )
-                }
-
-                // 关于
-                SettingsSection(title = "关于") {
-                    AboutItem(
-                        title = "版本",
-                        value = "${BuildConfig.VERSION_NAME} (1.0.1-stable)"
-                    )
-
-                    AboutItem(
-                        title = "开发者",
-                        value = "云朵团队"
-                    )
-                }
-
-                Spacer(modifier = Modifier.weight(1f))
 
                 // 重置按钮
                 Button(

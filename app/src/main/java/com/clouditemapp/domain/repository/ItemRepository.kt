@@ -10,4 +10,5 @@ interface ItemRepository {
     suspend fun getItemById(itemId: Long): Item?
     fun getAllItems(): Flow<List<Item>>
     fun getAllCategories(): Flow<List<String>>
+    suspend fun updateItemCustomImage(itemId: Long, path: String?)
 }

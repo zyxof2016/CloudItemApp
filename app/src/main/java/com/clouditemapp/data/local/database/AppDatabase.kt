@@ -18,7 +18,7 @@ import com.clouditemapp.data.local.entity.UserProgressEntity
         GameRecordEntity::class,
         AchievementEntity::class
     ],
-    version = 3,
+    version = 4,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

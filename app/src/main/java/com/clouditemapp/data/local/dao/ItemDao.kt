@@ -29,4 +29,7 @@ interface ItemDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertItem(item: ItemEntity)
+
+    @Query("UPDATE items SET customImagePath = :path WHERE id = :itemId")
+    suspend fun updateCustomImage(itemId: Long, path: String?)
 }

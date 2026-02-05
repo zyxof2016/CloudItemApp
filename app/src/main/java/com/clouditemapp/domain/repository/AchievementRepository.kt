@@ -2,8 +2,10 @@ package com.clouditemapp.domain.repository
 
 import com.clouditemapp.domain.model.Achievement
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.SharedFlow
 
 interface AchievementRepository {
+    val newUnlockedAchievements: SharedFlow<Achievement>
     fun getAllAchievements(): Flow<List<Achievement>>
     suspend fun getAchievementById(id: String): Achievement?
     fun getUnlockedAchievements(): Flow<List<Achievement>>

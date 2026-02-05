@@ -2,6 +2,7 @@ package com.clouditemapp.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.clouditemapp.data.local.PreferencesManager
 import com.clouditemapp.domain.model.Item
 import com.clouditemapp.domain.model.GameRecord
 import com.clouditemapp.domain.usecase.GetRandomItemsUseCase
@@ -20,7 +21,8 @@ class GameViewModel @Inject constructor(
     private val getItemsByCategoryUseCase: GetItemsByCategoryUseCase,
     private val saveGameRecordUseCase: SaveGameRecordUseCase,
     private val getTopScoresUseCase: GetTopScoresUseCase,
-    private val audioManager: AudioManager
+    private val audioManager: AudioManager,
+    private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 
     sealed class GameState {
@@ -39,6 +41,16 @@ class GameViewModel @Inject constructor(
 
     private val _selectedCategory = MutableStateFlow<String?>(null)
     val selectedCategory: StateFlow<String?> = _selectedCategory.asStateFlow()
+
+    private var currentLanguage = "中文"
+
+    init {
+        viewModelScope.launch {
+            preferencesManager.language.collect {
+                currentLanguage = it
+            }
+        }
+    }
 
     fun selectGameMode(gameType: String) {
         _currentGameType.value = gameType
@@ -111,14 +123,32 @@ class GameViewModel @Inject constructor(
                     playCurrentItemAudio()
                 } else if (_currentGameType.value == "guess") {
                     playCurrentItemDescriptionAudio()
+                } else if (_currentGameType.value == "shadow") {
+                    playManualAudio("shadow_prompt")
                 }
             }
         }
     }
 
+    fun playManualAudio(resName: String) {
+        audioManager.playSound(resName)
+    }
+
     fun playCurrentItemAudio() {
         val item = getCurrentItem() ?: return
-        audioManager.playSound(item.audioCN)
+        when(currentLanguage) {
+            "中文" -> audioManager.playSound(item.audioCN)
+            "English" -> audioManager.playSound(item.audioEN)
+            "双语" -> {
+                audioManager.playSound(item.audioCN) {
+                    viewModelScope.launch {
+                        kotlinx.coroutines.delay(500)
+                        audioManager.playSound(item.audioEN)
+                    }
+                }
+            }
+            else -> audioManager.playSound(item.audioCN)
+        }
     }
 
     fun playCurrentItemDescriptionAudio() {
@@ -158,6 +188,8 @@ class GameViewModel @Inject constructor(
                         playCurrentItemAudio()
                     } else if (_currentGameType.value == "guess") {
                         playCurrentItemDescriptionAudio()
+                    } else if (_currentGameType.value == "shadow") {
+                        playManualAudio("shadow_prompt")
                     }
                 } else {
                 endGame()
@@ -167,6 +199,7 @@ class GameViewModel @Inject constructor(
 
     private fun endGame() {
         val duration = (System.currentTimeMillis() - gameStartTime) / 1000
+        audioManager.stopSound() // 确保游戏结束时停止题目语音
         viewModelScope.launch {
             saveGameRecordUseCase(
                 gameType = _currentGameType.value,
@@ -184,7 +217,13 @@ class GameViewModel @Inject constructor(
     }
 
     fun goToMenu() {
+        audioManager.stopSound()
         _gameState.value = GameState.Menu
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        audioManager.stopSound()
     }
 
     fun getCurrentItem(): Item? {

@@ -37,6 +37,8 @@
     <string name="game_mode_guess_desc">根据物品特征，猜猜是什么</string>
     <string name="game_mode_listen">👂 听音识图</string>
     <string name="game_mode_listen_desc">听听声音，选出正确的物品</string>
+    <string name="game_mode_shadow">👻 影子挑战</string>
+    <string name="game_mode_shadow_desc">看影子，找出身后的秘密</string>
     <string name="start_game">🚀 开始游戏</string>
     <string name="click_to_start">点击开始挑战</string>
     <string name="question_guess">这是什么？</string>

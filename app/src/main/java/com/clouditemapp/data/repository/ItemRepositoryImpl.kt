@@ -43,6 +43,10 @@ class ItemRepositoryImpl @Inject constructor(
     override fun getAllCategories(): Flow<List<String>> {
         return itemDao.getAllCategories()
     }
+
+    override suspend fun updateItemCustomImage(itemId: Long, path: String?) {
+        itemDao.updateCustomImage(itemId, path)
+    }
 }
 
 private fun ItemEntity.toDomainModel(): Item {
@@ -59,7 +63,8 @@ private fun ItemEntity.toDomainModel(): Item {
         audioEN = audioEN,
         audioDescCN = audioDescCN,
         features = parseJsonList(features),
-        scenarios = parseJsonList(scenarios)
+        scenarios = parseJsonList(scenarios),
+        customImagePath = customImagePath
     )
 }
 

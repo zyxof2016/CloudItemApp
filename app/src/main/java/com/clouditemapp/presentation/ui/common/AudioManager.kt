@@ -18,17 +18,31 @@ class AudioManager @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) {
     private var mediaPlayer: MediaPlayer? = null
+    private var bgmPlayer: MediaPlayer? = null
     private var isSoundEnabled = true
+    private var isMusicEnabled = true
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
     init {
         scope.launch {
             // 初始化声音设置
             isSoundEnabled = preferencesManager.isSoundEnabled.first()
-            // 监听后续变化
-            preferencesManager.isSoundEnabled.collect { enabled ->
-                isSoundEnabled = enabled
-                if (!enabled) stopSound()
+            isMusicEnabled = preferencesManager.isMusicEnabled.first()
+            
+            // 监听声音变化
+            launch {
+                preferencesManager.isSoundEnabled.collect { enabled ->
+                    isSoundEnabled = enabled
+                    if (!enabled) stopSound()
+                }
+            }
+            
+            // 监听音乐变化
+            launch {
+                preferencesManager.isMusicEnabled.collect { enabled ->
+                    isMusicEnabled = enabled
+                    if (enabled) startBgm() else stopBgm()
+                }
             }
         }
     }
@@ -38,6 +52,43 @@ class AudioManager @Inject constructor(
         if (!enabled) {
             stopSound()
         }
+    }
+
+    fun setMusicEnabled(enabled: Boolean) {
+        isMusicEnabled = enabled
+        if (enabled) {
+            startBgm()
+        } else {
+            stopBgm()
+        }
+    }
+
+    fun startBgm() {
+        if (!isMusicEnabled) return
+        if (bgmPlayer != null && bgmPlayer!!.isPlaying) return
+        
+        try {
+            val resId = context.resources.getIdentifier("bgm_main", "raw", context.packageName)
+            if (resId != 0) {
+                bgmPlayer = MediaPlayer.create(context, resId).apply {
+                    isLooping = true
+                    setVolume(0.4f, 0.4f)
+                    start()
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    fun stopBgm() {
+        bgmPlayer?.apply {
+            try {
+                if (isPlaying) stop()
+            } catch (e: Exception) {}
+            release()
+        }
+        bgmPlayer = null
     }
 
     fun playSound(resName: String, onComplete: (() -> Unit)? = null) {

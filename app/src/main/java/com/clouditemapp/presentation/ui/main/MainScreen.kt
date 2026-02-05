@@ -17,12 +17,16 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.clouditemapp.presentation.viewmodel.MainViewModel
 
+import com.clouditemapp.presentation.ui.common.WindowSizeClass
+import com.clouditemapp.presentation.ui.common.rememberWindowSizeClass
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(
-    navController: NavController,
-    viewModel: MainViewModel = hiltViewModel()
+    navController: NavController
 ) {
+    val windowSize = rememberWindowSizeClass()
+    val isTablet = windowSize == WindowSizeClass.Expanded
     val skyGradient = Brush.verticalGradient(
         colors = listOf(
             Color(0xFFE0F7FA),
@@ -58,33 +62,78 @@ fun MainScreen(
                 Spacer(modifier = Modifier.height(32.dp))
 
                 // 功能按钮
-                MenuButton(
-                    text = "📚 认物学习",
-                    description = "认识各种有趣的物品",
-                    color = Color(0xFFFFB74D),
-                    onClick = { navController.navigate("learning") }
-                )
+                if (isTablet) {
+                    Column(
+                        verticalArrangement = Arrangement.spacedBy(24.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(24.dp)
+                        ) {
+                            MenuButton(
+                                modifier = Modifier.weight(1f),
+                                text = "📚 认物学习",
+                                description = "认识各种有趣的物品",
+                                color = Color(0xFFFFB74D),
+                                onClick = { navController.navigate("learning") }
+                            )
+                            MenuButton(
+                                modifier = Modifier.weight(1f),
+                                text = "🎮 趣味游戏",
+                                description = "边玩边学更开心",
+                                color = Color(0xFF81C784),
+                                onClick = { navController.navigate("game") }
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(24.dp)
+                        ) {
+                            MenuButton(
+                                modifier = Modifier.weight(1f),
+                                text = "🏆 我的成就",
+                                description = "看看你获得了什么成就",
+                                color = Color(0xFFBA68C8),
+                                onClick = { navController.navigate("profile") }
+                            )
+                            MenuButton(
+                                modifier = Modifier.weight(1f),
+                                text = "⚙️ 设置",
+                                description = "调整应用设置",
+                                color = Color(0xFF90A4AE),
+                                onClick = { navController.navigate("settings") }
+                            )
+                        }
+                    }
+                } else {
+                    MenuButton(
+                        text = "📚 认物学习",
+                        description = "认识各种有趣的物品",
+                        color = Color(0xFFFFB74D),
+                        onClick = { navController.navigate("learning") }
+                    )
 
-                MenuButton(
-                    text = "🎮 趣味游戏",
-                    description = "边玩边学更开心",
-                    color = Color(0xFF81C784),
-                    onClick = { navController.navigate("game") }
-                )
+                    MenuButton(
+                        text = "🎮 趣味游戏",
+                        description = "边玩边学更开心",
+                        color = Color(0xFF81C784),
+                        onClick = { navController.navigate("game") }
+                    )
 
-                MenuButton(
-                    text = "🏆 我的成就",
-                    description = "看看你获得了什么成就",
-                    color = Color(0xFFBA68C8),
-                    onClick = { navController.navigate("profile") }
-                )
+                    MenuButton(
+                        text = "🏆 我的成就",
+                        description = "看看你获得了什么成就",
+                        color = Color(0xFFBA68C8),
+                        onClick = { navController.navigate("profile") }
+                    )
 
-                MenuButton(
-                    text = "⚙️ 设置",
-                    description = "调整应用设置",
-                    color = Color(0xFF90A4AE),
-                    onClick = { navController.navigate("settings") }
-                )
+                    MenuButton(
+                        text = "⚙️ 设置",
+                        description = "调整应用设置",
+                        color = Color(0xFF90A4AE),
+                        onClick = { navController.navigate("settings") }
+                    )
+                }
 
                 Spacer(modifier = Modifier.weight(1f))
 
@@ -103,6 +152,7 @@ fun MainScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MenuButton(
+    modifier: Modifier = Modifier,
     text: String,
     description: String,
     color: Color,
@@ -110,7 +160,7 @@ fun MenuButton(
 ) {
     Card(
         onClick = onClick,
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(120.dp),
         shape = RoundedCornerShape(24.dp),

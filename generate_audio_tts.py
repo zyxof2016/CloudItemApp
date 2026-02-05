@@ -145,15 +145,26 @@ def generate_with_openai_tts(text, model, voice, output_path):
         return False
 
 async def generate_manual_sounds():
-    """生成系统手动定义的音效"""
+    """生成系统手动定义的音效及分类名称"""
     manual_items = [
         {"text": "答对了！", "file": "correct.mp3", "voice": VOICE_CN},
         {"text": "答错了，再试一次吧", "file": "wrong.mp3", "voice": VOICE_CN},
         {"text": "游戏结束", "file": "game_over.mp3", "voice": VOICE_CN},
-        {"text": "获得新成就", "file": "achievement.mp3", "voice": VOICE_CN}
+        {"text": "获得新成就", "file": "achievement.mp3", "voice": VOICE_CN},
+        {"text": "动物世界", "file": "cat_animals.mp3", "voice": VOICE_CN},
+        {"text": "美味水果", "file": "cat_fruits.mp3", "voice": VOICE_CN},
+        {"text": "新鲜蔬菜", "file": "cat_vegetables.mp3", "voice": VOICE_CN},
+        {"text": "交通工具", "file": "cat_transport.mp3", "voice": VOICE_CN},
+        {"text": "日常用品", "file": "cat_daily.mp3", "voice": VOICE_CN},
+        {"text": "自然现象", "file": "cat_nature.mp3", "voice": VOICE_CN},
+        {"text": "食物与饮料", "file": "cat_food.mp3", "voice": VOICE_CN},
+        {"text": "身体部位", "file": "cat_body.mp3", "voice": VOICE_CN},
+        {"text": "这是谁的影子呢？", "file": "shadow_prompt.mp3", "voice": VOICE_CN},
+        {"text": "太棒了，你全都答对啦！你是识物小天才！", "file": "perfect_score.mp3", "voice": VOICE_CN},
+        {"text": "背景音乐正在播放，换成你喜欢的儿歌吧！", "file": "bgm_main.mp3", "voice": VOICE_CN}
     ]
     
-    print("正在生成系统音效...")
+    print("正在生成系统音效及分类语音...")
     for item in manual_items:
         output_path = os.path.join(OUTPUT_DIR, item['file'])
         if not os.path.exists(output_path):

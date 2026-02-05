@@ -26,6 +26,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.clouditemapp.presentation.viewmodel.GameViewModel
 import com.clouditemapp.presentation.ui.common.ResourceUtils
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalContext
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -35,12 +38,19 @@ import com.clouditemapp.R
 
 import androidx.compose.ui.res.stringResource
 
+import com.clouditemapp.presentation.ui.common.WindowSizeClass
+import com.clouditemapp.presentation.ui.common.rememberWindowSizeClass
+
+import androidx.compose.ui.graphics.ColorMatrix
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GameScreen(
     navController: NavController,
     viewModel: GameViewModel = hiltViewModel()
 ) {
+    val windowSize = rememberWindowSizeClass()
+    val isTablet = windowSize == WindowSizeClass.Expanded
     val gameState by viewModel.gameState.collectAsState()
     val score by viewModel.score.collectAsState()
     val totalQuestions by viewModel.totalQuestions.collectAsState()
@@ -98,11 +108,17 @@ fun GameScreen(
                 is GameViewModel.GameState.Menu -> GameMenu(
                     onStartGuessGame = { viewModel.selectGameMode("guess") },
                     onStartListenGame = { viewModel.selectGameMode("listen") },
-                    onShowLeaderboard = { viewModel.showLeaderboard() }
+                    onStartShadowGame = { viewModel.selectGameMode("shadow") },
+                    onShowLeaderboard = { viewModel.showLeaderboard() },
+                    isTablet = isTablet
                 )
                 is GameViewModel.GameState.LevelSelection -> LevelSelectionScreen(
-                    onLevelSelected = { category -> viewModel.startGame(category) },
-                    onBack = { viewModel.goToMenu() }
+                    onLevelSelected = { category -> 
+                        viewModel.startGame(category)
+                    },
+                    onBack = { viewModel.goToMenu() },
+                    viewModel = viewModel,
+                    isTablet = isTablet
                 )
                 is GameViewModel.GameState.Playing -> GamePlay(
                     currentItem = currentItem,
@@ -110,7 +126,8 @@ fun GameScreen(
                     totalQuestions = totalQuestions,
                     currentGameType = viewModel.currentGameType.collectAsState().value,
                     onAnswer = { isCorrect -> viewModel.answer(isCorrect) },
-                    viewModel = viewModel
+                    viewModel = viewModel,
+                    isTablet = isTablet
                 )
                 is GameViewModel.GameState.Leaderboard -> LeaderboardView(
                     topScores = viewModel.topScores.collectAsState().value,
@@ -119,7 +136,8 @@ fun GameScreen(
                 is GameViewModel.GameState.Result -> GameResult(
                     result = gameState as GameViewModel.GameState.Result,
                     onPlayAgain = { viewModel.startGame(viewModel.selectedCategory.value) },
-                    onBackToMenu = { viewModel.goToMenu() }
+                    onBackToMenu = { viewModel.goToMenu() },
+                    viewModel = viewModel
                 )
             }
         }
@@ -129,7 +147,9 @@ fun GameScreen(
 @Composable
 fun LevelSelectionScreen(
     onLevelSelected: (String) -> Unit,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    viewModel: GameViewModel,
+    isTablet: Boolean = false
 ) {
     val levels = listOf(
         "动物世界", "美味水果", "新鲜蔬菜", "交通工具",
@@ -153,12 +173,40 @@ fun LevelSelectionScreen(
         
         Spacer(modifier = Modifier.height(24.dp))
         
-        levels.forEach { level ->
-            LevelCard(
-                title = level,
-                onClick = { onLevelSelected(level) }
-            )
-            Spacer(modifier = Modifier.height(16.dp))
+        if (isTablet) {
+            val rows = levels.chunked(3)
+            rows.forEach { row ->
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    row.forEach { level ->
+                        LevelCard(
+                            modifier = Modifier.weight(1f),
+                            title = level,
+                            onClick = { 
+                                playLevelAudio(level, viewModel)
+                                onLevelSelected(level) 
+                            }
+                        )
+                    }
+                    repeat(3 - row.size) {
+                        Spacer(modifier = Modifier.weight(1f))
+                    }
+                }
+                Spacer(modifier = Modifier.height(16.dp))
+            }
+        } else {
+            levels.forEach { level ->
+                LevelCard(
+                    title = level,
+                    onClick = { 
+                        playLevelAudio(level, viewModel)
+                        onLevelSelected(level) 
+                    }
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
         }
         
         Spacer(modifier = Modifier.height(24.dp))
@@ -176,11 +224,12 @@ fun LevelSelectionScreen(
 
 @Composable
 fun LevelCard(
+    modifier: Modifier = Modifier,
     title: String,
     onClick: () -> Unit
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(80.dp)
             .clickable { onClick() },
@@ -204,11 +253,30 @@ fun LevelCard(
     }
 }
 
+private fun playLevelAudio(level: String, viewModel: GameViewModel) {
+    val categoryAudio = when(level) {
+        "动物世界" -> "cat_animals"
+        "美味水果" -> "cat_fruits"
+        "新鲜蔬菜" -> "cat_vegetables"
+        "交通工具" -> "cat_transport"
+        "日常用品" -> "cat_daily"
+        "自然现象" -> "cat_nature"
+        "食物与饮料" -> "cat_food"
+        "身体部位" -> "cat_body"
+        else -> ""
+    }
+    if (categoryAudio.isNotEmpty()) {
+        viewModel.playManualAudio(categoryAudio)
+    }
+}
+
 @Composable
 fun GameMenu(
     onStartGuessGame: () -> Unit,
     onStartListenGame: () -> Unit,
-    onShowLeaderboard: () -> Unit
+    onStartShadowGame: () -> Unit,
+    onShowLeaderboard: () -> Unit,
+    isTablet: Boolean = false
 ) {
     val scrollState = rememberScrollState()
     Column(
@@ -238,50 +306,124 @@ fun GameMenu(
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        // 猜猜看模式
-        GameModeCard(
-            title = stringResource(R.string.game_mode_guess),
-            description = stringResource(R.string.game_mode_guess_desc),
-            color = Color(0xFF81C784),
-            onClick = onStartGuessGame
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // 听音识图模式
-        GameModeCard(
-            title = stringResource(R.string.game_mode_listen),
-            description = stringResource(R.string.game_mode_listen_desc),
-            color = Color(0xFF64B5F6),
-            onClick = onStartListenGame
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // 排行榜入口
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(80.dp)
-                .clickable { onShowLeaderboard() },
-            shape = RoundedCornerShape(24.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = Color(0xFFFFB74D)
-            ),
-            elevation = CardDefaults.cardElevation(
-                defaultElevation = 4.dp
-            )
-        ) {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
+        if (isTablet) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                Text(
-                    text = "🏆 排行榜",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White
+                // 猜猜看模式
+                GameModeCard(
+                    modifier = Modifier.weight(1f),
+                    title = stringResource(R.string.game_mode_guess),
+                    description = stringResource(R.string.game_mode_guess_desc),
+                    color = Color(0xFF81C784),
+                    onClick = onStartGuessGame
                 )
+                // 听音识图模式
+                GameModeCard(
+                    modifier = Modifier.weight(1f),
+                    title = stringResource(R.string.game_mode_listen),
+                    description = stringResource(R.string.game_mode_listen_desc),
+                    color = Color(0xFF64B5F6),
+                    onClick = onStartListenGame
+                )
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                // 影子挑战模式
+                GameModeCard(
+                    modifier = Modifier.weight(1f),
+                    title = stringResource(R.string.game_mode_shadow),
+                    description = stringResource(R.string.game_mode_shadow_desc),
+                    color = Color(0xFFBA68C8),
+                    onClick = onStartShadowGame
+                )
+                // 排行榜入口
+                Card(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(120.dp)
+                        .clickable { onShowLeaderboard() },
+                    shape = RoundedCornerShape(32.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color(0xFFFFB74D)
+                    ),
+                    elevation = CardDefaults.cardElevation(
+                        defaultElevation = 8.dp
+                    )
+                ) {
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "🏆 排行榜",
+                            fontSize = 24.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White
+                        )
+                    }
+                }
+            }
+        } else {
+            // 猜猜看模式
+            GameModeCard(
+                title = stringResource(R.string.game_mode_guess),
+                description = stringResource(R.string.game_mode_guess_desc),
+                color = Color(0xFF81C784),
+                onClick = onStartGuessGame
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // 听音识图模式
+            GameModeCard(
+                title = stringResource(R.string.game_mode_listen),
+                description = stringResource(R.string.game_mode_listen_desc),
+                color = Color(0xFF64B5F6),
+                onClick = onStartListenGame
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // 影子挑战模式
+            GameModeCard(
+                title = stringResource(R.string.game_mode_shadow),
+                description = stringResource(R.string.game_mode_shadow_desc),
+                color = Color(0xFFBA68C8),
+                onClick = onStartShadowGame
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // 排行榜入口
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(80.dp)
+                    .clickable { onShowLeaderboard() },
+                shape = RoundedCornerShape(24.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(0xFFFFB74D)
+                ),
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = 4.dp
+                )
+            ) {
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "🏆 排行榜",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                }
             }
         }
     }
@@ -289,13 +431,14 @@ fun GameMenu(
 
 @Composable
 fun GameModeCard(
+    modifier: Modifier = Modifier,
     title: String,
     description: String,
     color: Color,
     onClick: () -> Unit
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(120.dp)
             .clickable { onClick() },
@@ -427,11 +570,13 @@ fun GamePlay(
     totalQuestions: Int,
     currentGameType: String,
     onAnswer: (Boolean) -> Unit,
-    viewModel: GameViewModel
+    viewModel: GameViewModel,
+    isTablet: Boolean = false
 ) {
     val options by viewModel.options.collectAsState()
     var selectedOptionId by remember(currentIndex) { mutableStateOf<Long?>(null) }
     val context = LocalContext.current
+    val haptic = LocalHapticFeedback.current
 
     val answerScale by animateFloatAsState(
         targetValue = if (selectedOptionId != null) 1.05f else 1f,
@@ -445,7 +590,7 @@ fun GamePlay(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(if (isTablet) 32.dp else 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // 进度
@@ -453,8 +598,8 @@ fun GamePlay(
             progress = (currentIndex + 1).toFloat() / totalQuestions,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(8.dp)
-                .clip(RoundedCornerShape(4.dp)),
+                .height(if (isTablet) 12.dp else 8.dp)
+                .clip(RoundedCornerShape(6.dp)),
             color = Color(0xFF81C784),
         )
 
@@ -462,7 +607,7 @@ fun GamePlay(
 
         Text(
             text = "问题 ${currentIndex + 1} / $totalQuestions",
-            fontSize = 18.sp,
+            fontSize = if (isTablet) 24.sp else 18.sp,
             fontWeight = FontWeight.Bold,
             color = Color(0xFF0277BD)
         )
@@ -470,163 +615,263 @@ fun GamePlay(
         Spacer(modifier = Modifier.height(16.dp))
 
         currentItem?.let { item ->
-            // 问题卡片
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(0.4f),
-                shape = RoundedCornerShape(32.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = Color.White
-                ),
-                elevation = CardDefaults.cardElevation(
-                    defaultElevation = 8.dp
-                )
-            ) {
-                Box(
+            if (isTablet) {
+                // 平板布局：左右或上下调整
+                Row(
                     modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp),
-                    contentAlignment = Alignment.Center
+                        .fillMaxWidth()
+                        .weight(1f),
+                    horizontalArrangement = Arrangement.spacedBy(32.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    if (currentGameType == "guess") {
-                        // 提示文字 (较大，居中，有呼吸效果)
-                        val infiniteTransition = rememberInfiniteTransition(label = "hint")
-                        val hintScale by infiniteTransition.animateFloat(
-                            initialValue = 1f,
-                            targetValue = 1.02f,
-                            animationSpec = infiniteRepeatable(
-                                animation = tween(1000, easing = LinearEasing),
-                                repeatMode = RepeatMode.Reverse
-                            ),
-                            label = "hintScale"
-                        )
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            modifier = Modifier.clickable { viewModel.playCurrentItemDescriptionAudio() }
-                        ) {
-                            Text(
-                                text = item.descriptionCN,
-                                fontSize = 28.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFF0277BD),
-                                textAlign = TextAlign.Center,
-                                lineHeight = 38.sp,
-                                modifier = Modifier
-                                    .padding(16.dp)
-                                    .scale(hintScale)
-                            )
-                            Icon(
-                                Icons.Default.VolumeUp,
-                                contentDescription = "播放描述",
-                                tint = Color(0xFF0277BD).copy(alpha = 0.5f),
-                                modifier = Modifier.size(24.dp)
+                    // 问题区域
+                    Card(
+                        modifier = Modifier
+                            .weight(1f)
+                            .aspectRatio(1f),
+                        shape = RoundedCornerShape(32.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+                    ) {
+                        QuestionContent(currentGameType, item, viewModel, context)
+                    }
+
+                    // 选项区域
+                    androidx.compose.foundation.lazy.grid.LazyVerticalGrid(
+                        columns = androidx.compose.foundation.lazy.grid.GridCells.Fixed(2),
+                        modifier = Modifier.weight(1.2f),
+                        contentPadding = PaddingValues(4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        items(options.size) { index ->
+                            GameOptionCard(
+                                option = options[index],
+                                isCorrect = options[index].id == item.id,
+                                isSelected = selectedOptionId == options[index].id,
+                                selectedOptionId = selectedOptionId,
+                                answerScale = answerScale,
+                                onOptionSelected = {
+                                    selectedOptionId = options[index].id
+                                    haptic.performHapticFeedback(
+                                        if (options[index].id == item.id) HapticFeedbackType.LongPress 
+                                        else HapticFeedbackType.TextHandleMove
+                                    )
+                                    onAnswer(options[index].id == item.id)
+                                },
+                                context = context
                             )
                         }
-                    } else {
-                        // 播放按钮 (很大，适合幼儿)
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(
-                                text = "点我听声音",
-                                fontSize = 16.sp,
-                                color = Color(0xFF0277BD),
-                                modifier = Modifier.padding(bottom = 8.dp)
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .size(100.dp)
-                                    .clip(CircleShape)
-                                    .background(Color(0xFFE3F2FD))
-                                    .clickable { viewModel.playCurrentItemAudio() },
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(
-                                    Icons.Default.VolumeUp,
-                                    contentDescription = "播放声音",
-                                    modifier = Modifier.size(64.dp),
-                                    tint = Color(0xFF0277BD)
+                    }
+                }
+            } else {
+                // 手机布局
+                // 问题卡片
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(0.4f),
+                    shape = RoundedCornerShape(32.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+                ) {
+                    QuestionContent(currentGameType, item, viewModel, context)
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // 答案选项
+                androidx.compose.foundation.lazy.grid.LazyVerticalGrid(
+                    columns = androidx.compose.foundation.lazy.grid.GridCells.Fixed(2),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(0.6f),
+                    contentPadding = PaddingValues(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    items(options.size) { index ->
+                        GameOptionCard(
+                            option = options[index],
+                            isCorrect = options[index].id == item.id,
+                            isSelected = selectedOptionId == options[index].id,
+                            selectedOptionId = selectedOptionId,
+                            answerScale = answerScale,
+                            onOptionSelected = {
+                                selectedOptionId = options[index].id
+                                haptic.performHapticFeedback(
+                                    if (options[index].id == item.id) HapticFeedbackType.LongPress 
+                                    else HapticFeedbackType.TextHandleMove
                                 )
-                            }
-                        }
+                                onAnswer(options[index].id == item.id)
+                            },
+                            context = context
+                        )
                     }
                 }
             }
+        }
+    }
+}
 
-            Spacer(modifier = Modifier.height(16.dp))
-
-            // 答案选项 (九宫格形式，显示图片)
-            androidx.compose.foundation.lazy.grid.LazyVerticalGrid(
-                columns = androidx.compose.foundation.lazy.grid.GridCells.Fixed(2),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(0.6f),
-                contentPadding = PaddingValues(4.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
+@Composable
+fun QuestionContent(
+    currentGameType: String,
+    item: com.clouditemapp.domain.model.Item,
+    viewModel: GameViewModel,
+    context: android.content.Context
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        if (currentGameType == "guess") {
+            // 提示文字 (较大，居中，有呼吸效果)
+            val infiniteTransition = rememberInfiniteTransition(label = "hint")
+            val hintScale by infiniteTransition.animateFloat(
+                initialValue = 1f,
+                targetValue = 1.02f,
+                animationSpec = infiniteRepeatable(
+                    animation = tween(1000, easing = LinearEasing),
+                    repeatMode = RepeatMode.Reverse
+                ),
+                label = "hintScale"
+            )
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.clickable { viewModel.playCurrentItemDescriptionAudio() }
             ) {
-                items(options.size) { index ->
-                    val option = options[index]
-                    val isCorrect = option.id == item.id
-                    val isSelected = selectedOptionId == option.id
-                    val imageSource = ResourceUtils.getItemImageRes(context, option.imageRes, option.category)
-
-                    val backgroundColor = when {
-                        selectedOptionId == null -> Color.White
-                        isSelected && isCorrect -> Color(0xFF81C784)
-                        isSelected && !isCorrect -> Color(0xFFEF5350)
-                        !isSelected && isCorrect -> Color(0xFF81C784).copy(alpha = 0.5f)
-                        else -> Color.White
-                    }
-
-                    Card(
-                        modifier = Modifier
-                            .aspectRatio(1f)
-                            .scale(if (isSelected) answerScale else 1f)
-                            .clickable(enabled = selectedOptionId == null) {
-                                selectedOptionId = option.id
-                                onAnswer(isCorrect)
-                            },
-                        shape = RoundedCornerShape(24.dp),
-                        colors = CardDefaults.cardColors(
-                            containerColor = backgroundColor
-                        ),
-                        elevation = CardDefaults.cardElevation(
-                            defaultElevation = 4.dp
-                        )
-                    ) {
-                        Column(
-                            modifier = Modifier.fillMaxSize(),
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.Center
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .fillMaxWidth(), // 移除内边距，让图片填充更大
-                                contentAlignment = Alignment.Center
-                            ) {
-                                AsyncImage(
-                                    model = ImageRequest.Builder(context)
-                                        .data(imageSource)
-                                        .crossfade(true)
-                                        .build(),
-                                    contentDescription = option.nameCN,
-                                    modifier = Modifier.fillMaxSize(),
-                                    contentScale = androidx.compose.ui.layout.ContentScale.Crop // 填充完全
-                                )
-                            }
-                            if (selectedOptionId != null) {
-                                Text(
-                                    text = option.nameCN,
-                                    fontSize = 18.sp, // 稍微加大字体
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (isSelected) Color.White else Color(0xFF0277BD),
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
-                            }
+                Text(
+                    text = item.descriptionCN,
+                    fontSize = 28.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFF0277BD),
+                    textAlign = TextAlign.Center,
+                    lineHeight = 38.sp,
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .scale(hintScale)
+                )
+                Icon(
+                    Icons.Default.VolumeUp,
+                    contentDescription = "播放描述",
+                    tint = Color(0xFF0277BD).copy(alpha = 0.5f),
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+        } else if (currentGameType == "shadow") {
+            // 影子显示
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                val imageSource = ResourceUtils.getItemImageRes(context, item.imageRes, item.category, item.customImagePath)
+                AsyncImage(
+                    model = ImageRequest.Builder(context)
+                        .data(imageSource)
+                        .crossfade(true)
+                        .build(),
+                    contentDescription = "影子",
+                    modifier = Modifier
+                                    .fillMaxHeight()
+                                    .aspectRatio(1f),
+                                contentScale = androidx.compose.ui.layout.ContentScale.Fit,
+                                colorFilter = ColorFilter.colorMatrix(ColorMatrix(floatArrayOf(
+                                    0f, 0f, 0f, 0f, 0f,
+                                    0f, 0f, 0f, 0f, 0f,
+                                    0f, 0f, 0f, 0f, 0f,
+                                    -0.33f, -0.33f, -0.33f, 1f, 255f
+                                )))
+                            )
                         }
-                    }
+        } else {
+            // 播放按钮 (很大，适合幼儿)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = "点我听声音",
+                    fontSize = 16.sp,
+                    color = Color(0xFF0277BD),
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+                Box(
+                    modifier = Modifier
+                        .size(100.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFFE3F2FD))
+                        .clickable { viewModel.playCurrentItemAudio() },
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        Icons.Default.VolumeUp,
+                        contentDescription = "播放声音",
+                        modifier = Modifier.size(64.dp),
+                        tint = Color(0xFF0277BD)
+                    )
                 }
+            }
+        }
+    }
+}
+
+@Composable
+fun GameOptionCard(
+    option: com.clouditemapp.domain.model.Item,
+    isCorrect: Boolean,
+    isSelected: Boolean,
+    selectedOptionId: Long?,
+    answerScale: Float,
+    onOptionSelected: () -> Unit,
+    context: android.content.Context
+) {
+    val backgroundColor = when {
+        selectedOptionId == null -> Color.White
+        isSelected && isCorrect -> Color(0xFF81C784)
+        isSelected && !isCorrect -> Color(0xFFEF5350)
+        !isSelected && isCorrect -> Color(0xFF81C784).copy(alpha = 0.5f)
+        else -> Color.White
+    }
+
+    Card(
+        modifier = Modifier
+            .aspectRatio(1f)
+            .scale(if (isSelected) answerScale else 1f)
+            .clickable(enabled = selectedOptionId == null) { onOptionSelected() },
+        shape = RoundedCornerShape(24.dp),
+        colors = CardDefaults.cardColors(containerColor = backgroundColor),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth(),
+                contentAlignment = Alignment.Center
+            ) {
+                val imageSource = ResourceUtils.getItemImageRes(context, option.imageRes, option.category, option.customImagePath)
+                AsyncImage(
+                    model = ImageRequest.Builder(context)
+                        .data(imageSource)
+                        .crossfade(true)
+                        .build(),
+                    contentDescription = option.nameCN,
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = androidx.compose.ui.layout.ContentScale.Crop
+                )
+            }
+            if (selectedOptionId != null) {
+                Text(
+                    text = option.nameCN,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = if (isSelected) Color.White else Color(0xFF0277BD),
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
             }
         }
     }
@@ -636,13 +881,24 @@ fun GamePlay(
 fun GameResult(
     result: GameViewModel.GameState.Result,
     onPlayAgain: () -> Unit,
-    onBackToMenu: () -> Unit
+    onBackToMenu: () -> Unit,
+    viewModel: GameViewModel
 ) {
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.celebration))
     val progress by animateLottieCompositionAsState(
         composition,
         iterations = LottieConstants.IterateForever
     )
+
+    val isPerfect = result.correctCount == result.totalCount && result.totalCount > 0
+
+    LaunchedEffect(Unit) {
+        if (isPerfect) {
+            viewModel.playManualAudio("perfect_score")
+        } else {
+            viewModel.playManualAudio("game_over")
+        }
+    }
 
     val correctPercentage = if (result.totalCount > 0) {
         (result.correctCount * 100) / result.totalCount
@@ -657,9 +913,9 @@ fun GameResult(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Lottie 动画展示（无效/空 JSON 时显示占位）
+        // Lottie 动画展示（全屏或大图）
         Box(
-            modifier = Modifier.size(200.dp),
+            modifier = Modifier.size(if (isPerfect) 300.dp else 200.dp),
             contentAlignment = Alignment.Center
         ) {
             if (composition != null) {
@@ -671,6 +927,16 @@ fun GameResult(
             } else {
                 Text(text = "🎉", fontSize = 120.sp)
             }
+        }
+
+        if (isPerfect) {
+            Text(
+                text = "太棒了！全对啦！",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFFFBC02D),
+                modifier = Modifier.padding(top = 8.dp)
+            )
         }
 
         Spacer(modifier = Modifier.height(24.dp))

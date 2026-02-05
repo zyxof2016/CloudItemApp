@@ -17,5 +17,6 @@ data class ItemEntity(
     val audioEN: String,         // 英文音频路径
     val audioDescCN: String,     // 中文描述音频路径
     val features: String,        // 特征（JSON）
-    val scenarios: String        // 场景（JSON）
+    val scenarios: String,       // 场景（JSON）
+    val customImagePath: String? = null // 家长自定义图片路径
 )

@@ -25,12 +25,17 @@ import androidx.navigation.NavController
 import com.clouditemapp.domain.model.Achievement
 import com.clouditemapp.presentation.viewmodel.ProfileViewModel
 
+import com.clouditemapp.presentation.ui.common.WindowSizeClass
+import com.clouditemapp.presentation.ui.common.rememberWindowSizeClass
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
     navController: NavController,
     viewModel: ProfileViewModel = hiltViewModel()
 ) {
+    val windowSize = rememberWindowSizeClass()
+    val isTablet = windowSize == WindowSizeClass.Expanded
     val stats by viewModel.stats.collectAsState()
     val achievements by viewModel.achievements.collectAsState()
     
@@ -155,7 +160,7 @@ fun ProfileScreen(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 // 成就列表
-                AchievementGrid(achievements)
+                AchievementGrid(achievements, isTablet)
             }
         }
     }
@@ -210,17 +215,18 @@ fun StatCard(
 }
 
 @Composable
-fun AchievementGrid(achievements: List<Achievement>) {
+fun AchievementGrid(achievements: List<Achievement>, isTablet: Boolean = false) {
     if (achievements.isEmpty()) {
         Box(modifier = Modifier.fillMaxWidth().height(100.dp), contentAlignment = Alignment.Center) {
             Text(text = "加油，开始你的探索之旅吧！", color = Color.Gray)
         }
     } else {
+        val columns = if (isTablet) 4 else 2
         androidx.compose.foundation.lazy.LazyColumn(
             verticalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
-            val rows = achievements.chunked(2)
+            val rows = achievements.chunked(columns)
             items(rows.size) { rowIndex ->
                 val row = rows[rowIndex]
                 Row(
@@ -233,7 +239,7 @@ fun AchievementGrid(achievements: List<Achievement>) {
                             achievement = achievement
                         )
                     }
-                    if (row.size == 1) {
+                    repeat(columns - row.size) {
                         Spacer(modifier = Modifier.weight(1f))
                     }
                 }

@@ -13,5 +13,6 @@ data class Item(
     val audioEN: String,
     val audioDescCN: String,
     val features: List<String>,
-    val scenarios: List<String>
+    val scenarios: List<String>,
+    val customImagePath: String? = null // 家长自定义图片路径
 )
